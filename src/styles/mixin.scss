@@ -1,0 +1,48 @@
+@mixin homeSecondTitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 30px auto 50px auto;
+  max-width: 570px;
+  width: 100%;
+}
+
+@mixin homeSecondTitleMedium {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 25px auto 40px auto;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+@mixin homeSecondTitleSmall {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 15px auto 25px auto;
+  text-align: center;
+}
+
+@mixin beforeCard {
+  position: absolute;
+  z-index: -1;
+  border-radius: 23px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  background: #fff;
+}
+
+@mixin input {
+  background: #FFFFFF;
+  height: 45px;
+  border: 2px solid #E7E7E7;
+  box-sizing: border-box;
+  border-radius: 22.5px;
+  font-size: 14px;
+  line-height: 17px;
+  padding-left: 28px;
+  color: #979797;
+}
+

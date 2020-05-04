@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createReducer } from \"../../utils/store\";\nimport faq from './faq/reducer';\nimport { combineReducers } from \"redux\";\nconst defaultProps = {};\nexport default combineReducers({\n  faq\n});","map":null,"metadata":{},"sourceType":"module"}

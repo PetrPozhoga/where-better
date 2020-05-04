@@ -1,0 +1,110 @@
+@import "../../../styles/mixin";
+
+.root {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.popularProviderContainer {
+
+}
+
+.item {
+  padding: 21px 0 25px 0;
+  background: #E5E5E5;
+  border-radius: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 1;
+  transition: background-color .2s;
+  &::before {
+    @include beforeCard
+  }
+  &:hover{
+    background: linear-gradient(153.31deg, #004396 -7.23%, #F3473C 67.97%);
+  }
+}
+
+.title {
+  line-height: 30px;
+  margin-top: 2px;
+  margin-bottom: 13px;
+}
+
+.assessment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    margin-right: 8px;
+  }
+
+  & > div {
+    font-weight: bold;
+  }
+}
+
+.totalTariff {
+  font-weight: bold;
+  line-height: 30px;
+  margin-top: 19px;
+}
+
+.speed, .price, .cities {
+  line-height: 30px;
+}
+
+.btn {
+  max-width: 148px;
+  margin-top: 36px;
+}
+
+@media (max-width: 950px) {
+  .totalTariff {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 19px;
+  }
+}
+
+@media (max-width: 700px) {
+  .item {
+    padding: 18px 0 21px 0;
+    &>svg {
+      width: 135px;
+      height: 32px;
+    }
+  }
+
+  .title {
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  .assessment {
+
+    svg {
+      margin-right: 6px;
+      width: 25px;
+      height: 25px;
+    }
+
+    & > div {
+      font-weight: bold;
+    }
+  }
+
+  .totalTariff {
+    margin-top: 9px;
+    margin-bottom: 7px;
+  }
+
+  .btn {
+    max-width: 127px;
+    margin-top: 10px;
+    height: 32px;
+    line-height: 32px;
+  }
+}

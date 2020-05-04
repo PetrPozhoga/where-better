@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  max-width: 1001px;
+  margin: auto auto 50px auto;
+  justify-content: space-between;
+  align-items: center;
+  a{
+    font-size: 15px;
+  }
+}

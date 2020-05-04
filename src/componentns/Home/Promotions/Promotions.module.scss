@@ -1,0 +1,138 @@
+.root {
+  padding: 60px 0 45px 0;
+  background: #F0F0F0;
+  border-radius: 44px;
+}
+
+.selectContainer {
+  max-width: 218px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+}
+
+.promotionSlider {
+}
+
+.item {
+  background: #fff;
+  padding: 43px 71px 26px 71px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  & > svg {
+    margin-bottom: 23px;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 380px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.description {
+  line-height: 22px;
+  margin-bottom: 48px;
+}
+
+.slideBtnContainer {
+  width: 100%;
+  max-width: 196px;
+
+  & > div {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.btnPromotionContainer {
+  width: 100%;
+  max-width: 164px;
+  margin: 40px auto 0 auto;
+}
+
+@media (max-width: 1550px) {
+  .root {
+    padding: 40px 0 30px 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .root {
+    & > h1 {
+      max-width: 390px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .description {
+    line-height: 20px;
+    margin-bottom: 48px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .root {
+    min-width: 100vw;
+    margin-left: -20px;
+    border-radius: 25px;
+    padding: 30px 23px 35px 23px;
+
+    & > h1 {
+      max-width: 314px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .selectContainer {
+    max-width: 218px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .promotionSlider {
+  }
+
+  .item {
+    background: #fff;
+    padding: 23px 16px 26px 16px;
+
+    & > svg {
+      margin-bottom: 15px;
+      height: 15px;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 13px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+
+  .slideBtnContainer {
+    width: 100%;
+    margin-top: auto;
+    max-width: 161px;
+  }
+
+  .btnPromotionContainer {
+    margin: 30px auto 0 auto;
+  }
+}

@@ -1,0 +1,174 @@
+.root {
+  display: flex;
+  max-width: 1104px;
+  margin: 0 auto 90px auto;
+}
+
+.item {
+  height: 170px;
+  width: calc((100% - 20px) / 2);
+  border: 2px solid #EBEBEB;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;;
+
+  &:first-child {
+    margin-right: 20px;
+
+    svg {
+      margin: 20px 23px 29px 18.7px;
+    }
+  }
+
+  &:last-child {
+    svg {
+      margin: 25px 23px 26px 19px;
+    }
+  }
+
+  & > div {
+    margin: 33px 19px 26px 0px;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.description {
+  margin-bottom: 25px;
+}
+
+.btnContainer {
+  max-width: 185px;
+  width: 100%;
+}
+
+@media (max-width: 1550px) {
+  .root {
+    margin-bottom: 65px;
+  }
+  .item {
+    height: 150px;
+
+    &:first-child {
+      margin-right: 20px;
+
+      svg {
+        width: 125px;
+        margin: 0px 23px 0px 18.7px;
+      }
+    }
+
+    &:last-child {
+      svg {
+        height: 152px;
+        margin: 0px 23px 0px 19px;
+      }
+    }
+
+    & > div {
+      margin: 33px 19px 26px 0px;
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .description {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .root {
+    flex-direction: column;
+  }
+  .item {
+    height: 204px;
+    width: 100%;
+
+    &:first-child{
+      margin-bottom: 30px;
+    }
+
+    &:first-child, &:last-child {
+      svg {
+        width: 201px;
+        height: 168px;
+        margin: 18px;
+      }
+    }
+
+    & > div {
+      margin: 0px;
+    }
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .description {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .root {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .item {
+    position: relative;
+    height: 182px;
+    padding: 20px 20px 20px 15px;
+    align-items: self-start;
+    &:first-child, &:last-child {
+      svg {
+        width: 96px;
+        height: 81px;
+        margin: 0px 15px auto 15px;
+      }
+    }
+
+    & > div {
+      margin: 0px;
+      flex: 1;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .description {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .btnContainer {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 185px;
+  }
+}
+
+@media (max-width: 360px) {
+  .item {
+    position: relative;
+    height: 182px;
+    padding: 20px 20px 20px 15px;
+    align-items: self-start;
+  }
+
+  .title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

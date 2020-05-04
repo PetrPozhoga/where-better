@@ -1,0 +1,184 @@
+@import "../../styles/mixin";
+
+.home {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+.container {
+  max-width: 1282px;
+  margin: 0 auto;
+}
+
+.btnConsultation {
+  max-width: 196px;
+}
+
+.titleContainer {
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    @include homeSecondTitle;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1104px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.logoContainer {
+  position: relative;
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+
+  a {
+    height: 38px;
+  }
+}
+
+div.navLink {
+  margin-bottom: 60px;
+}
+
+div.footerNav {
+  max-width: 844px;
+  margin-bottom: 40px;
+}
+
+.storeBtnContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+
+  & > svg {
+    &:first-child {
+      margin-right: 9px;
+    }
+  }
+}
+
+.politic {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1550px) {
+  .home {
+    h1 {
+      font-size: 33px;
+    }
+  }
+
+  .titleContainer {
+
+    h2 {
+      @include homeSecondTitleMedium;
+    }
+
+    .container {
+      max-width: 1104px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  div.footerNav {
+    max-width: 844px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 1330px) {
+  .container {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .home {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  div.navLink {
+    margin-bottom: 65px;
+  }
+  .storeSocialContainer {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 29px auto;
+    align-items: center;
+    .storeBtnContainer {
+      margin-left: auto;
+      height: 30px;
+      margin-bottom: 0;
+      &>svg {
+        height: 100%;
+        width: 108px;
+      }
+    }
+  }
+  .politic {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 38px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home {
+    h1 {
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+    }
+    h2{
+      @include homeSecondTitleSmall
+    }
+  }
+  .mobileNav {
+    display: none;
+  }
+  .logoContainer {
+    margin-bottom: 25px;
+    a, svg {
+      height: 19px;
+      width: 100%;
+      display: block;
+    }
+  }
+  div.footerNav {
+    max-width: 100%;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    &>a{
+      //&:nth-child(odd) {
+        margin-right: 20px;
+      //}
+    }
+  }
+  .storeSocialContainer {
+    display: block;
+    margin-bottom: 35px;
+    .storeBtnContainer {
+      margin-top: 35px;
+      svg{
+        &:first-child{
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  .politic {
+    text-align: center;
+  }
+}

@@ -1,0 +1,14 @@
+.valueContainer {
+  width: 100%;
+  padding: 0 23px;
+  display: flex;
+  &>div{
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 16px;
+    color: #fff;
+    &:last-child{
+      margin-left: auto;
+    }
+  }
+}

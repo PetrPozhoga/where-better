@@ -1,0 +1,272 @@
+@import "../../../../styles/mixin";
+.root {
+
+}
+
+.itemContainer {
+  padding-left: 16px;
+}
+
+.tariffsFRT {
+  transform: translateX(-8.5px);
+}
+
+.item {
+  //margin-left: 16px;
+  height: 100%;
+  padding: 17px 16px 35px 16px;
+  border-radius: 25px;
+  background: #E5E5E5;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  z-index: 1;
+  transition: background-color .2s;
+  &::before {
+    @include beforeCard
+
+  }
+  &:hover{
+    background: linear-gradient(153.31deg, #004396 -7.23%, #F3473C 67.97%);
+  }
+
+  & > svg {
+    &:first-child {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+.combo {
+  position: absolute;
+  top: 56px;
+  left: -10px;
+  display: flex;
+}
+
+.speed {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 30px;
+  margin-top: 12px;
+  margin-bottom: 31px;
+  text-align: center;
+}
+
+.conditions {
+  &>div{
+    margin-bottom: 12px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    &:nth-child(odd){
+      svg {
+        margin-right: 19px;
+      }
+    }
+    &:nth-child(even){
+      svg {
+        margin-right: 17px;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .conditionsNotIncluded {
+    opacity: 0.3;
+  }
+}
+
+.btnLink {
+  margin: 20px auto 0 auto;
+  text-decoration: underline;
+}
+
+.btnLinkContainer {
+  text-align: center;
+}
+
+.discount {
+  background: linear-gradient(104.29deg, #F3473C -1.9%, #D81D60 98.6%);
+  border-radius: 5px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 18px;
+}
+
+.price {
+  margin: auto auto 13px auto;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.costWithoutDiscount {
+  position: absolute;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 30px;
+  color: #565656;
+  top: -10px;
+  right: -10px;
+  transform: translate(100%, 0);
+}
+
+.btn{
+  max-width: 148px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1550px) {
+  .speed {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .conditions {
+    &>div{
+      margin-bottom: 10px;
+      line-height: 30px;
+    }
+  }
+
+  .btnLink {
+    margin: 15px auto 0 auto;
+  }
+
+  .price {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .costWithoutDiscount {
+    font-size: 14px;
+  }
+
+  .btn{
+    max-width: 148px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 972px) {
+  .itemContainer {
+    padding-left: 22px;
+  }
+}
+
+@media(max-width: 700px) {
+  .item {
+    padding: 25px 15px 17px 15px;
+    &::before {
+      @include beforeCard
+    }
+
+    background: linear-gradient(153.31deg, #004396 -7.23%, #F3473C 67.97%);
+
+    & > svg {
+      &:first-child {
+        margin: 0 auto;
+        display: block;
+        height: 18px;
+      }
+    }
+  }
+
+  .speed {
+    margin-top: 14px;
+    margin-bottom: 17px;
+    text-align: center;
+  }
+
+  .mobileSpeed {
+    text-align: right;
+  }
+
+  .conditions {
+    &>div{
+      margin-bottom: 0px;
+      line-height: 30px;
+      display: flex;
+      font-size: 14px;
+      align-items: center;
+      &:first-child svg {
+        width: 13px;
+        height: 9px;
+      }
+      &:nth-child(2) svg {
+        width: 15px;
+        height: 13px;
+      }
+      &:nth-child(3) svg {
+        width: 13px;
+        height: 13px;
+      }
+      &:last-child svg {
+        width: 15px;
+        height: 15px;
+      }
+      &:nth-child(odd){
+        svg {
+          margin-right: 9px;
+        }
+      }
+      &:nth-child(even){
+        svg {
+          margin-right: 7px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .conditionsNotIncluded {
+      opacity: 0.3;
+    }
+  }
+
+  .btnLink {
+    margin: 9px auto 0 auto;
+  }
+
+  .discount {
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    width: 100%;
+    border-radius: 0;
+    min-width: calc(100% + 22px);
+    margin-left: -11px;
+    margin-top: 12px;
+  }
+
+  .price {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .costWithoutDiscount {
+    font-size: 13px;
+    line-height: 30px;
+  }
+
+  .btn{
+    max-width: 148px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

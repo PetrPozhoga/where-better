@@ -1,0 +1,40 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 41px;
+  &>a{
+    display: inline-block;
+    margin-right: 25px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .root {
+    margin-bottom: 0;
+
+    a {
+      margin-right: 22px;
+      &:first-child{
+        svg {
+          width: 32px;
+          height: 19px;
+        }
+      }
+      &:nth-child(2), &:nth-child(3){
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+      &:last-child{
+        svg {
+          width: 14px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

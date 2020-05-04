@@ -1,0 +1,95 @@
+@import "../../../styles/var";
+
+.root {
+  display: flex;
+  width: 100%;
+  margin: 80px 0;
+}
+
+.item {
+  height: 259px;
+  width: calc((100% - 159px) / 4);
+  margin-right: 53px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: $gray-color;
+  padding: 0 17px;
+  border-radius: 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.count {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.title {
+  padding: 0 24px 0 23px;
+  margin: 10px 0 20px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 1550px) {
+  .root {
+    margin: 66px 0;
+  }
+  .item {
+    height: 232px;
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+    padding: 0 23px;
+  }
+  .count {
+    font-weight: bold;
+    font-size: 33px;
+  }
+
+  .title {
+    padding: 0 15px;
+    margin: 10px 0 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+@media (max-width: 1150px) {
+  .item {
+    height: auto;
+    width: auto;
+    margin-right: 0;
+    padding: 0 23px;
+  }
+}
+
+@media (max-width: 950px) {
+  .count{
+    font-size: 30px;
+  }
+  .title{
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .root {
+    margin: 50px 0;
+  }
+  .item{
+    padding: 0 25px;
+  }
+  .count{
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .title{
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 5px;
+  }
+}

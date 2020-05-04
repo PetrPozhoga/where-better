@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+html, body {
+  font: 500  16px 'Montserrat', sans-serif;
+}
+
+body{
+  padding-bottom: 0 !important;
+}
+
+#App {
+  min-height: 100vh;
+  overflow: hidden auto;
+  .container{
+    max-width: 1077px;
+    margin: 0 auto;
+  }
+}

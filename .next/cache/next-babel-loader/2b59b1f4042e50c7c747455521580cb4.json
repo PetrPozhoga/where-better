@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createReducer } from \"../../utils/store\";\nconst defaultProps = {};\nexport default createReducer(defaultProps, {});","map":null,"metadata":{},"sourceType":"module"}

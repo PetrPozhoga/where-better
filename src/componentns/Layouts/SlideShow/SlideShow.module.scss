@@ -1,0 +1,100 @@
+.root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrapp {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  //z-index: 1;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  position: relative;
+  margin-left: 0px;
+  //transition: left linear .3s;
+}
+
+.item {
+  div {
+    width: 100%;
+  }
+}
+
+.arrowControl {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 50px;
+  transform: translateY(-50%);
+
+  & > svg {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+
+    &:hover > circle {
+      fill-opacity: 0.65;
+    }
+
+    &:first-child {
+      left: -14px;
+    }
+
+    &:last-child {
+      right: -14px;
+    }
+  }
+}
+
+.circleControl {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  & > div {
+    width: 10px;
+    height: 10px;
+    background: #C4C4C4;
+    border-radius: 50px;
+    margin-right: 7px;
+    cursor: pointer;
+  }
+}
+
+div.activeCircle {
+  background: #333333;
+}
+
+@media (max-width: 1150px) {
+  .arrowControl {
+    & > svg {
+      height: 45px;
+      width: 45px;
+    }
+  }
+  .circleControl {
+    margin-top: 40px;
+    & > div {
+      width: 7px;
+      height: 7px;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .arrowControl {
+    & > svg {
+      height: 37px;
+      width: 37px;
+    }
+  }
+}

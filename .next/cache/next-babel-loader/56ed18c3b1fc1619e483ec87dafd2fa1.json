@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const CHANGE_HOME_FAQ_DROPDOWN = 'CHANGE_HOME_FAQ_DROPDOWN';\nexport const changeHomeFaqDropDown = arr => ({\n  type: CHANGE_HOME_FAQ_DROPDOWN,\n  arr\n});","map":null,"metadata":{},"sourceType":"module"}
