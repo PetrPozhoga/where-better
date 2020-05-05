@@ -116,11 +116,13 @@ div.footerNav {
     width: 100%;
     margin: 0 auto 29px auto;
     align-items: center;
+
     .storeBtnContainer {
       margin-left: auto;
       height: 30px;
       margin-bottom: 0;
-      &>svg {
+
+      & > svg {
         height: 100%;
         width: 108px;
       }
@@ -140,7 +142,8 @@ div.footerNav {
       line-height: 29px;
       text-align: center;
     }
-    h2{
+
+    h2 {
       @include homeSecondTitleSmall
     }
   }
@@ -149,6 +152,7 @@ div.footerNav {
   }
   .logoContainer {
     margin-bottom: 25px;
+
     a, svg {
       height: 19px;
       width: 100%;
@@ -160,25 +164,28 @@ div.footerNav {
     margin-bottom: 30px;
     flex-wrap: wrap;
     justify-content: center;
-    &>a{
-      //&:nth-child(odd) {
-        margin-right: 20px;
-      //}
+
+    & > a {
+      margin-right: 20px;
     }
   }
   .storeSocialContainer {
     display: block;
     margin-bottom: 35px;
+
     .storeBtnContainer {
       margin-top: 35px;
-      svg{
-        &:first-child{
+
+      svg {
+        &:first-child {
           margin-right: 6px;
         }
       }
     }
   }
   .politic {
+    padding-bottom: 90px;
+    margin-bottom: 0;
     text-align: center;
   }
 }
