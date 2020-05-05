@@ -1,1 +1,0 @@
-{"ast":null,"code":"export var CHANGE_WINDOW_SIZE = 'CHANGE_WINDOW_SIZE';\nexport var changeWindowSize = function changeWindowSize() {\n  return {\n    type: CHANGE_WINDOW_SIZE,\n    size: {\n      windowInnerHeight: window.innerHeight,\n      windowInnerWidth: window.innerWidth\n    }\n  };\n};","map":null,"metadata":{},"sourceType":"module"}
