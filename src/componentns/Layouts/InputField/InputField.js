@@ -14,7 +14,7 @@ const InputField = ({ value, placeholder, inputId }) => {
   }
 
   return (
-    <label className={ styles.root + ' ' + stylesMask.root }>
+    <label className={ stylesMask.root + ' ' + styles.root }>
       <input id={ inputId } type="text" value={ customValue } onChange={ changeHandler }/>
       <span style={ { top: !!customValue.length ? '16px' : '50%' } }>{ placeholder }</span>
     </label>
