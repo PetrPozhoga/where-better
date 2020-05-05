@@ -1,7 +1,13 @@
 export const CHANGE_HOME_FAQ_DROPDOWN = 'CHANGE_HOME_FAQ_DROPDOWN'
 export const CHANGE_FAQ_LIST_MOBILE = 'CHANGE_FAQ_LIST_MOBILE'
 
-export const changeHomeFaqDropDown = (arr) => ({ type: CHANGE_HOME_FAQ_DROPDOWN, arr })
+export const changeHomeFaqDropDown = (arr) => (dispatch, getState) => {
+  const width = getState().window.size.windowInnerWidth
+  dispatch({
+    type: width <= 700 ? CHANGE_FAQ_LIST_MOBILE : CHANGE_HOME_FAQ_DROPDOWN,
+    [ width <= 700 ? 'faqListMobile' : 'arr' ]: arr
+  })
+}
 
 export const showMoreQuestion = () => (dispatch, getState) => {
   const faq = getState().home.faq
