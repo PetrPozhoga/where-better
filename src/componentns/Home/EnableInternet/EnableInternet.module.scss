@@ -23,6 +23,8 @@
 .searchContainer {
   display: flex;
   max-width: 720px;
+  width: 100%;
+  justify-content: center;
   align-items: center;
   &>input {
     @include input();
@@ -38,7 +40,7 @@
   font-size: 22px;
   height: 61px;
   line-height: 61px;
-  padding: 0 26px;
+  max-width: 275px;
   margin: 45px 0 50px 0;
 }
 

@@ -1932,10 +1932,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./node_modules/typeface-montserrat/index.css":
-/*!****************************************************!*\
-  !*** ./node_modules/typeface-montserrat/index.css ***!
-  \****************************************************/
+/***/ "./src/assets/fonts/lato/lato.scss":
+/*!*****************************************!*\
+  !*** ./src/assets/fonts/lato/lato.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1943,10 +1943,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./src/assets/fonts/lato/lato.scss":
-/*!*****************************************!*\
-  !*** ./src/assets/fonts/lato/lato.scss ***!
-  \*****************************************/
+/***/ "./src/assets/fonts/montserrat/stylesheet.scss":
+/*!*****************************************************!*\
+  !*** ./src/assets/fonts/montserrat/stylesheet.scss ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2523,10 +2523,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _componentns_TopSidebar_TopSidebar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../componentns/TopSidebar/TopSidebar */ "./src/componentns/TopSidebar/TopSidebar.js");
 /* harmony import */ var _assets_fonts_lato_lato_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/fonts/lato/lato.scss */ "./src/assets/fonts/lato/lato.scss");
 /* harmony import */ var _assets_fonts_lato_lato_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_fonts_lato_lato_scss__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _styles_hamburger_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/hamburger.scss */ "./src/styles/hamburger.scss");
-/* harmony import */ var _styles_hamburger_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_hamburger_scss__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var typeface_montserrat__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! typeface-montserrat */ "./node_modules/typeface-montserrat/index.css");
-/* harmony import */ var typeface_montserrat__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(typeface_montserrat__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _assets_fonts_montserrat_stylesheet_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/fonts/montserrat/stylesheet.scss */ "./src/assets/fonts/montserrat/stylesheet.scss");
+/* harmony import */ var _assets_fonts_montserrat_stylesheet_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_assets_fonts_montserrat_stylesheet_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _styles_hamburger_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/hamburger.scss */ "./src/styles/hamburger.scss");
+/* harmony import */ var _styles_hamburger_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_styles_hamburger_scss__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _styles_app_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/app.scss */ "./src/styles/app.scss");
 /* harmony import */ var _styles_app_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles_app_scss__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "/Users/petrpozoga/WIB/where-better/src/pages/_app.js";
@@ -2543,6 +2543,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+ // import 'typeface-montserrat'
 
 
 
@@ -2558,21 +2559,21 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 7
       }
     }, __jsx(_componentns_Root__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 9
       }
     }, __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 13
       }
     }, __jsx("meta", {
@@ -2581,21 +2582,21 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 15
       }
     })), __jsx(_componentns_TopSidebar_TopSidebar__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 13
       }
     }), __jsx(Component, _extends({}, pageProps, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 13
       }
     })))));

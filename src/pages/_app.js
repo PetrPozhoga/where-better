@@ -6,8 +6,9 @@ import Root from "../componentns/Root"
 import withReduxStore from '../utils/with-redux-store'
 import TopSidebar from "../componentns/TopSidebar/TopSidebar"
 import '../assets/fonts/lato/lato.scss'
+import '../assets/fonts/montserrat/stylesheet.scss'
 import '../styles/hamburger.scss'
-import 'typeface-montserrat'
+// import 'typeface-montserrat'
 import '../styles/app.scss'
 
 class MyApp extends App {
