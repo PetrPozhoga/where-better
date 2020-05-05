@@ -35,7 +35,7 @@
 }
 
 @mixin input {
-  background: #FFFFFF;
+  background: transparent;
   height: 45px;
   border: 2px solid #E7E7E7;
   box-sizing: border-box;
@@ -43,6 +43,16 @@
   font-size: 14px;
   line-height: 17px;
   padding-left: 28px;
-  color: #979797;
+  transition: border-color linear .2s;
+  color: #000000;
+  &:hover{
+    border: 2px solid #AFAFAF;
+  }
+  &::placeholder {
+    color: #979797;
+  }
+  &:focus{
+    border: 2px solid #1E8E4B;
+  }
 }
 

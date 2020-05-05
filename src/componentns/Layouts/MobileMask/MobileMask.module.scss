@@ -1,0 +1,28 @@
+@import "../../../styles/mixin";
+.root {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 419px;
+  border-radius: 30px;
+  &>span{
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #979797;
+    z-index: -1;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  input {
+    @include input;
+    height: 60px;
+    border-radius: 30px;
+    padding: 28px 28px 12px 28px;
+    background: transparent;
+    &:focus + span{
+      top: 16px !important;
+    }
+  }
+}

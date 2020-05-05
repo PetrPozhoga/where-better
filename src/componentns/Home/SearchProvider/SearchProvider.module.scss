@@ -51,7 +51,7 @@
 }
 
 .maskRoot {
-  label {
+  &>label {
     margin-bottom: 22px;
     font-size: 18px;
     line-height: 22px;
@@ -60,6 +60,12 @@
 }
 
 .maskContainer {
+  display: flex;
+  align-items: center;
+  &>label{
+    max-width: 303px;
+    height: 45px;
+  }
   input {
     @include input;
     max-width: 303px;
@@ -117,14 +123,14 @@
   }
 
   .maskRoot {
-    label {
+    &>label {
       font-size: 16px;
       margin-bottom: 15px;
     }
   }
 
   .maskContainer {
-    input {
+    input, label {
       max-width: 275px;
     }
   }
@@ -182,7 +188,7 @@
   .maskRoot {
     width: 100%;
 
-    label {
+    &>label {
       margin-bottom: 15px;
       text-align: center;
     }
@@ -198,6 +204,10 @@
       @include input;
       max-width: 320px;
       width: 100%;
+    }
+    label{
+      max-width: 320px;
+
     }
   }
 

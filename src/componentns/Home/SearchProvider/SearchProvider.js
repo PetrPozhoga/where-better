@@ -3,6 +3,7 @@ import Btn from "../../Layouts/Btn/Btn"
 import iphoneImg from './iPhone6.jpg'
 import searchMob from './searchMob.jpg'
 import StoreBtn from './StoreBtn/StoreBtn'
+import MobileMask from "../../Layouts/MobileMask/MobileMask"
 import styles from './SearchProvider.module.scss'
 import { connect } from "react-redux"
 
@@ -24,7 +25,7 @@ const SearchProvider = ({windowInnerWidth}) => {
             Получить ссылку в СМС
           </label>
           <div className={ styles.maskContainer }>
-            <input type="text" placeholder='+7( )'/>
+            <MobileMask value={''}/>
             <Btn className={ styles.btn } styleBtn='black' title='Отправить'/>
           </div>
         </div>
