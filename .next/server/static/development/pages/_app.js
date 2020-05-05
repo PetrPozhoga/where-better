@@ -1970,21 +1970,28 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/petrpozoga/WIB/where-better/src/componentns/Layouts/Btn/Btn.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = (({
   title,
   styleBtn,
-  className
+  className,
+  onClick
 }) => {
-  return __jsx("div", {
-    className: _Btn_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a[styleBtn] + (className ? ' ' + className : ''),
+  const attribute = {
+    className: _Btn_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a[styleBtn] + (className ? ' ' + className : '')
+  };
+  if (onClick) attribute.onClick = onClick;
+  return __jsx("div", _extends({}, attribute, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 12,
       columnNumber: 5
     }
-  }, title);
+  }), title);
 });
 
 /***/ }),
@@ -2612,18 +2619,45 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
 /*!***************************************!*\
   !*** ./src/store/home/faq/actions.js ***!
   \***************************************/
-/*! exports provided: CHANGE_HOME_FAQ_DROPDOWN, changeHomeFaqDropDown */
+/*! exports provided: CHANGE_HOME_FAQ_DROPDOWN, CHANGE_FAQ_LIST_MOBILE, changeHomeFaqDropDown, showMoreQuestion */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_HOME_FAQ_DROPDOWN", function() { return CHANGE_HOME_FAQ_DROPDOWN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_FAQ_LIST_MOBILE", function() { return CHANGE_FAQ_LIST_MOBILE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeHomeFaqDropDown", function() { return changeHomeFaqDropDown; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showMoreQuestion", function() { return showMoreQuestion; });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+
 const CHANGE_HOME_FAQ_DROPDOWN = 'CHANGE_HOME_FAQ_DROPDOWN';
+const CHANGE_FAQ_LIST_MOBILE = 'CHANGE_FAQ_LIST_MOBILE';
 const changeHomeFaqDropDown = arr => ({
   type: CHANGE_HOME_FAQ_DROPDOWN,
   arr
 });
+const showMoreQuestion = () => (dispatch, getState) => {
+  const faq = getState().home.faq;
+  const showItems = faq.showMobileItems;
+  const faqList = faq.faqList.slice();
+  let faqListMobile = faq.faqListMobile.slice();
+  console.log(faqList.slice(faqListMobile.length, faqListMobile.length + showItems));
+  faqListMobile = [].concat(_toConsumableArray(faqListMobile), _toConsumableArray(faqList.slice(faqListMobile.length, faqListMobile.length + showItems)));
+  dispatch({
+    type: CHANGE_FAQ_LIST_MOBILE,
+    faqListMobile
+  });
+};
 
 /***/ }),
 
@@ -2646,33 +2680,41 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+const faqList = [{
+  title: 'Что делать если пропал интернет и роутер уже много раз перезагружал?',
+  description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.',
+  isActive: true
+}, {
+  title: 'Что делать если пропал интернет?',
+  description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
+}, {
+  title: 'Что делать если пропал интернет и роутер уже много раз перезагружал?',
+  description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
+}, {
+  title: 'Что делать если пропал интернет?',
+  description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
+}, {
+  title: 'Что делать если пропал интернет и роутер уже много раз перезагружал?',
+  description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
+}, {
+  title: 'Что делать если пропал интернет?',
+  description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
+}];
 const defaultValue = {
-  faqList: [{
-    title: 'Что делать если пропал интернет и роутер уже много раз перезагружал?',
-    description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.',
-    isActive: true
-  }, {
-    title: 'Что делать если пропал интернет?',
-    description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
-  }, {
-    title: 'Что делать если пропал интернет и роутер уже много раз перезагружал?',
-    description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
-  }, {
-    title: 'Что делать если пропал интернет?',
-    description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
-  }, {
-    title: 'Что делать если пропал интернет и роутер уже много раз перезагружал?',
-    description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
-  }, {
-    title: 'Что делать если пропал интернет?',
-    description: 'Первым делом. находим наш пароль от сети вайфай. Поднимаем наши документы на предоставление провайдером услуг интернета. Для чего? скажете вы, ведь нам нужно проверить драйвера на работоспособность.'
-  }]
+  faqList,
+  faqListMobile: faqList.slice(0, 4),
+  showMobileItems: 4
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(_utils_store__WEBPACK_IMPORTED_MODULE_0__["createReducer"])(defaultValue, {
   [_actions__WEBPACK_IMPORTED_MODULE_1__["CHANGE_HOME_FAQ_DROPDOWN"]]: (state, {
     arr
   }) => _objectSpread({}, state, {
     faqList: arr
+  }),
+  [_actions__WEBPACK_IMPORTED_MODULE_1__["CHANGE_FAQ_LIST_MOBILE"]]: (state, {
+    faqListMobile
+  }) => _objectSpread({}, state, {
+    faqListMobile
   })
 }));
 

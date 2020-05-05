@@ -1,0 +1,15 @@
+@media (max-width: 700px) {
+  .root {
+    margin-bottom: 50px;
+  }
+
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    max-width: 196px;
+  }
+
+}

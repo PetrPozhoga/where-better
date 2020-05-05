@@ -3986,6 +3986,25 @@ exports.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/next/node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/componentns/Home/FAQ/FAQ.module.scss":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-3-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./src/componentns/Home/FAQ/FAQ.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/next/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/next/node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, "@media (max-width: 700px) {\n  .FAQ_root__1EqBq {\n    margin-bottom: 50px; }\n  .FAQ_btnContainer__3Yv9- {\n    display: flex;\n    justify-content: center; }\n  .FAQ_btn__1jKiF {\n    max-width: 196px; } }\n", "",{"version":3,"sources":["/Users/petrpozoga/WIB/where-better/src/componentns/Home/FAQ/FAQ.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,mBAAmB,EAAA;EAGrB;IACE,aAAa;IACb,uBAAuB,EAAA;EAGzB;IACE,gBAAgB,EAAA,EACjB","file":"FAQ.module.scss","sourcesContent":["@media (max-width: 700px) {\n  .root {\n    margin-bottom: 50px;\n  }\n\n  .btnContainer {\n    display: flex;\n    justify-content: center;\n  }\n\n  .btn {\n    max-width: 196px;\n  }\n\n}\n"]}]);
+// Exports
+exports.locals = {
+	"root": "FAQ_root__1EqBq",
+	"btnContainer": "FAQ_btnContainer__3Yv9-",
+	"btn": "FAQ_btn__1jKiF"
+};
+
+/***/ }),
+
 /***/ "./node_modules/next/node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/componentns/Home/FavorableRates/FavorableRates.module.scss":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/next/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-3-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./src/componentns/Home/FavorableRates/FavorableRates.module.scss ***!
@@ -4312,7 +4331,7 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/next/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/next/node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".Tariff_root__CO9lq {\n  padding: 34px 0 55px 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #343131;\n  border-radius: 25px;\n  width: 100%; }\n  .Tariff_root__CO9lq > h1 {\n    color: #fff;\n    text-align: center;\n    max-width: 395px;\n    width: 100%;\n    margin-bottom: 20px; }\n  .Tariff_root__CO9lq > label {\n    text-align: center;\n    margin-bottom: 40px;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    flex-direction: column; }\n    .Tariff_root__CO9lq > label:last-child {\n      margin-bottom: 0; }\n    .Tariff_root__CO9lq > label > span:first-child {\n      font-size: 14px;\n      display: block;\n      color: #fff;\n      font-weight: 600;\n      margin-bottom: 15px; }\n\n.Tariff_selectRoot__V5OZk {\n  flex-direction: column; }\n\n.Tariff_layout__3xBLT {\n  max-width: 282px;\n  width: 100%; }\n\n.Tariff_radioContainer__2XcVh {\n  display: flex;\n  flex-direction: row; }\n  .Tariff_radioContainer__2XcVh > div {\n    margin-right: 28px; }\n    .Tariff_radioContainer__2XcVh > div:last-child {\n      margin-right: 0; }\n\n@media (max-width: 1550px) {\n  .Tariff_root__CO9lq {\n    padding: 29px 0; } }\n\n@media (max-width: 950px) {\n  .Tariff_root__CO9lq {\n    padding: 30px 0 48px 0;\n    max-width: 653px;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    margin-right: -20px; }\n    .Tariff_root__CO9lq > h1 {\n      max-width: 296px; } }\n\n@media (max-width: 700px) {\n  .Tariff_root__CO9lq {\n    padding: 30px 20px 34px 20px;\n    max-width: 100%;\n    margin-right: 0px;\n    margin-left: -20px;\n    min-width: calc(100% + 40px); }\n    .Tariff_root__CO9lq > h1 {\n      max-width: 237px; }\n    .Tariff_root__CO9lq > label {\n      margin-bottom: 30px; }\n      .Tariff_root__CO9lq > label:last-child {\n        margin-bottom: 0; }\n      .Tariff_root__CO9lq > label > span:first-child {\n        font-size: 12px;\n        margin-bottom: 15px; }\n  .Tariff_radioContainer__2XcVh {\n    flex-wrap: wrap;\n    font-size: 14px; }\n    .Tariff_radioContainer__2XcVh > div {\n      margin-right: 28px; }\n      .Tariff_radioContainer__2XcVh > div:last-child {\n        margin-right: 0; } }\n\n@media (max-width: 389px) {\n  .Tariff_radioContainer__2XcVh {\n    justify-content: center; }\n    .Tariff_radioContainer__2XcVh > div:last-child {\n      margin-top: 16px; } }\n", "",{"version":3,"sources":["/Users/petrpozoga/WIB/where-better/src/componentns/Home/TariffSelection/Tariff/Tariff.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,mBAAmB;EACnB,mBAAmB;EACnB,WAAW,EAAA;EAPb;IASI,WAAW;IACX,kBAAkB;IAClB,gBAAgB;IAChB,WAAW;IACX,mBAAmB,EAAA;EAbvB;IAgBI,kBAAkB;IAClB,mBAAmB;IACnB,aAAa;IACb,mBAAmB;IACnB,WAAW;IACX,sBAAsB,EAAA;IArB1B;MAwBM,gBAAgB,EAAA;IAxBtB;MA2BM,eAAe;MACf,cAAc;MACd,WAAW;MACX,gBAAgB;MAChB,mBAAmB,EAAA;;AAKzB;EACE,sBAAsB,EAAA;;AAGxB;EACE,gBAAgB;EAChB,WAAW,EAAA;;AAGb;EACE,aAAa;EACb,mBAAmB,EAAA;EAFrB;IAII,kBAAkB,EAAA;IAJtB;MAMM,eAAe,EAAA;;AAKrB;EACE;IACE,eAAe,EAAA,EAChB;;AAGH;EACE;IACE,sBAAsB;IACtB,gBAAgB;IAChB,0BAA0B;IAC1B,6BAA6B;IAC7B,mBAAmB,EAAA;IALrB;MAOI,gBAAgB,EAAA,EACjB;;AAIL;EACE;IACE,4BAA4B;IAC5B,eAAe;IACf,iBAAiB;IACjB,kBAAkB;IAClB,4BAA4B,EAAA;IAL9B;MAOI,gBAAgB,EAAA;IAPpB;MAUI,mBAAmB,EAAA;MAVvB;QAaM,gBAAgB,EAAA;MAbtB;QAgBM,eAAe;QACf,mBAAmB,EAAA;EAIzB;IACE,eAAe;IACf,eAAe,EAAA;IAFjB;MAII,kBAAkB,EAAA;MAJtB;QAMM,eAAe,EAAA,EAChB;;AAKP;EACE;IACE,uBAAuB,EAAA;IADzB;MAIM,gBAAgB,EAAA,EACjB","file":"Tariff.module.scss","sourcesContent":[".root {\n  padding: 34px 0 55px 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #343131;\n  border-radius: 25px;\n  width: 100%;\n  &>h1{\n    color: #fff;\n    text-align: center;\n    max-width: 395px;\n    width: 100%;\n    margin-bottom: 20px;\n  }\n  &>label{\n    text-align: center;\n    margin-bottom: 40px;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    flex-direction: column;\n\n    &:last-child{\n      margin-bottom: 0;\n    }\n    &>span:first-child{\n      font-size: 14px;\n      display: block;\n      color: #fff;\n      font-weight: 600;\n      margin-bottom: 15px;\n    }\n  }\n}\n\n.selectRoot {\n  flex-direction: column;\n}\n\n.layout {\n  max-width: 282px;\n  width: 100%;\n}\n\n.radioContainer {\n  display: flex;\n  flex-direction: row;\n  &>div{\n    margin-right: 28px;\n    &:last-child{\n      margin-right: 0;\n    }\n  }\n}\n\n@media (max-width: 1550px) {\n  .root {\n    padding: 29px 0;\n  }\n}\n\n@media (max-width: 950px) {\n  .root {\n    padding: 30px 0 48px 0;\n    max-width: 653px;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    margin-right: -20px;\n    &>h1{\n      max-width: 296px;\n    }\n  }\n}\n\n@media (max-width: 700px) {\n  .root {\n    padding: 30px 20px 34px 20px;\n    max-width: 100%;\n    margin-right: 0px;\n    margin-left: -20px;\n    min-width: calc(100% + 40px);\n    &>h1{\n      max-width: 237px;\n    }\n    &>label{\n      margin-bottom: 30px;\n\n      &:last-child{\n        margin-bottom: 0;\n      }\n      &>span:first-child{\n        font-size: 12px;\n        margin-bottom: 15px;\n      }\n    }\n  }\n  .radioContainer {\n    flex-wrap: wrap;\n    font-size: 14px;\n    &>div{\n      margin-right: 28px;\n      &:last-child{\n        margin-right: 0;\n      }\n    }\n  }\n}\n\n@media (max-width: 389px) {\n  .radioContainer {\n    justify-content: center;\n    &>div{\n      &:last-child{\n        margin-top: 16px;\n      }\n    }\n  }\n}\n"]}]);
+exports.push([module.i, ".Tariff_root__CO9lq {\n  padding: 34px 0 55px 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #343131;\n  border-radius: 25px;\n  width: 100%; }\n  .Tariff_root__CO9lq > h1 {\n    color: #fff;\n    text-align: center;\n    max-width: 395px;\n    width: 100%;\n    margin-bottom: 20px; }\n  .Tariff_root__CO9lq > label {\n    text-align: center;\n    margin-bottom: 40px;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    flex-direction: column; }\n    .Tariff_root__CO9lq > label:last-child {\n      margin-bottom: 0; }\n    .Tariff_root__CO9lq > label > span:first-child {\n      font-size: 14px;\n      display: block;\n      color: #fff;\n      font-weight: 600;\n      margin-bottom: 15px; }\n\n.Tariff_selectRoot__V5OZk {\n  flex-direction: column; }\n\n.Tariff_layout__3xBLT {\n  max-width: 280px;\n  width: 100%; }\n\n.Tariff_radioContainer__2XcVh {\n  display: flex;\n  flex-direction: row; }\n  .Tariff_radioContainer__2XcVh > div {\n    margin-right: 28px; }\n    .Tariff_radioContainer__2XcVh > div:last-child {\n      margin-right: 0; }\n\n@media (max-width: 1550px) {\n  .Tariff_root__CO9lq {\n    padding: 29px 0; } }\n\n@media (max-width: 950px) {\n  .Tariff_root__CO9lq {\n    padding: 30px 0 48px 0;\n    max-width: 653px;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    margin-right: -20px; }\n    .Tariff_root__CO9lq > h1 {\n      max-width: 296px; } }\n\n@media (max-width: 700px) {\n  .Tariff_root__CO9lq {\n    padding: 30px 20px 34px 20px;\n    max-width: 100%;\n    margin-right: 0px;\n    margin-left: -20px;\n    min-width: calc(100% + 40px); }\n    .Tariff_root__CO9lq > h1 {\n      max-width: 237px; }\n    .Tariff_root__CO9lq > label {\n      margin-bottom: 30px; }\n      .Tariff_root__CO9lq > label:last-child {\n        margin-bottom: 0; }\n      .Tariff_root__CO9lq > label > span:first-child {\n        font-size: 12px;\n        margin-bottom: 15px; }\n  .Tariff_radioContainer__2XcVh {\n    flex-wrap: wrap;\n    font-size: 14px; }\n    .Tariff_radioContainer__2XcVh > div {\n      margin-right: 28px; }\n      .Tariff_radioContainer__2XcVh > div:last-child {\n        margin-right: 0; } }\n\n@media (max-width: 389px) {\n  .Tariff_radioContainer__2XcVh {\n    justify-content: center; }\n    .Tariff_radioContainer__2XcVh > div:last-child {\n      margin-top: 16px; } }\n", "",{"version":3,"sources":["/Users/petrpozoga/WIB/where-better/src/componentns/Home/TariffSelection/Tariff/Tariff.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,mBAAmB;EACnB,mBAAmB;EACnB,WAAW,EAAA;EAPb;IASI,WAAW;IACX,kBAAkB;IAClB,gBAAgB;IAChB,WAAW;IACX,mBAAmB,EAAA;EAbvB;IAgBI,kBAAkB;IAClB,mBAAmB;IACnB,aAAa;IACb,mBAAmB;IACnB,WAAW;IACX,sBAAsB,EAAA;IArB1B;MAwBM,gBAAgB,EAAA;IAxBtB;MA2BM,eAAe;MACf,cAAc;MACd,WAAW;MACX,gBAAgB;MAChB,mBAAmB,EAAA;;AAKzB;EACE,sBAAsB,EAAA;;AAGxB;EACE,gBAAgB;EAChB,WAAW,EAAA;;AAGb;EACE,aAAa;EACb,mBAAmB,EAAA;EAFrB;IAII,kBAAkB,EAAA;IAJtB;MAMM,eAAe,EAAA;;AAKrB;EACE;IACE,eAAe,EAAA,EAChB;;AAGH;EACE;IACE,sBAAsB;IACtB,gBAAgB;IAChB,0BAA0B;IAC1B,6BAA6B;IAC7B,mBAAmB,EAAA;IALrB;MAOI,gBAAgB,EAAA,EACjB;;AAIL;EACE;IACE,4BAA4B;IAC5B,eAAe;IACf,iBAAiB;IACjB,kBAAkB;IAClB,4BAA4B,EAAA;IAL9B;MAOI,gBAAgB,EAAA;IAPpB;MAUI,mBAAmB,EAAA;MAVvB;QAaM,gBAAgB,EAAA;MAbtB;QAgBM,eAAe;QACf,mBAAmB,EAAA;EAIzB;IACE,eAAe;IACf,eAAe,EAAA;IAFjB;MAII,kBAAkB,EAAA;MAJtB;QAMM,eAAe,EAAA,EAChB;;AAKP;EACE;IACE,uBAAuB,EAAA;IADzB;MAIM,gBAAgB,EAAA,EACjB","file":"Tariff.module.scss","sourcesContent":[".root {\n  padding: 34px 0 55px 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #343131;\n  border-radius: 25px;\n  width: 100%;\n  &>h1{\n    color: #fff;\n    text-align: center;\n    max-width: 395px;\n    width: 100%;\n    margin-bottom: 20px;\n  }\n  &>label{\n    text-align: center;\n    margin-bottom: 40px;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    flex-direction: column;\n\n    &:last-child{\n      margin-bottom: 0;\n    }\n    &>span:first-child{\n      font-size: 14px;\n      display: block;\n      color: #fff;\n      font-weight: 600;\n      margin-bottom: 15px;\n    }\n  }\n}\n\n.selectRoot {\n  flex-direction: column;\n}\n\n.layout {\n  max-width: 280px;\n  width: 100%;\n}\n\n.radioContainer {\n  display: flex;\n  flex-direction: row;\n  &>div{\n    margin-right: 28px;\n    &:last-child{\n      margin-right: 0;\n    }\n  }\n}\n\n@media (max-width: 1550px) {\n  .root {\n    padding: 29px 0;\n  }\n}\n\n@media (max-width: 950px) {\n  .root {\n    padding: 30px 0 48px 0;\n    max-width: 653px;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    margin-right: -20px;\n    &>h1{\n      max-width: 296px;\n    }\n  }\n}\n\n@media (max-width: 700px) {\n  .root {\n    padding: 30px 20px 34px 20px;\n    max-width: 100%;\n    margin-right: 0px;\n    margin-left: -20px;\n    min-width: calc(100% + 40px);\n    &>h1{\n      max-width: 237px;\n    }\n    &>label{\n      margin-bottom: 30px;\n\n      &:last-child{\n        margin-bottom: 0;\n      }\n      &>span:first-child{\n        font-size: 12px;\n        margin-bottom: 15px;\n      }\n    }\n  }\n  .radioContainer {\n    flex-wrap: wrap;\n    font-size: 14px;\n    &>div{\n      margin-right: 28px;\n      &:last-child{\n        margin-right: 0;\n      }\n    }\n  }\n}\n\n@media (max-width: 389px) {\n  .radioContainer {\n    justify-content: center;\n    &>div{\n      &:last-child{\n        margin-top: 16px;\n      }\n    }\n  }\n}\n"]}]);
 // Exports
 exports.locals = {
 	"root": "Tariff_root__CO9lq",
@@ -4407,7 +4426,7 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/next/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/next/node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".DropDown_root__f7YtX {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 79px; }\n\n.DropDown_itemContainer__H9wVs {\n  width: calc((100% - 28px) / 2); }\n  .DropDown_itemContainer__H9wVs > div {\n    margin-bottom: 35px; }\n    .DropDown_itemContainer__H9wVs > div:last-child {\n      margin-bottom: 0; }\n\n@media (max-width: 950px) {\n  .DropDown_root__f7YtX {\n    margin-bottom: 65px; } }\n\n@media (max-width: 700px) {\n  .DropDown_root__f7YtX {\n    margin-bottom: 50px; }\n  .DropDown_itemContainer__H9wVs {\n    width: 100%; } }\n", "",{"version":3,"sources":["/Users/petrpozoga/WIB/where-better/src/componentns/Layouts/DropDown/DropDown.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,eAAe;EACf,mBAAmB,EAAA;;AAGrB;EACE,8BAA8B,EAAA;EADhC;IAGI,mBAAmB,EAAA;IAHvB;MAKM,gBAAgB,EAAA;;AAKtB;EACE;IACE,mBAAmB,EAAA,EACpB;;AAGH;EACE;IACE,mBAAmB,EAAA;EAErB;IACE,WAAW,EAAA,EACZ","file":"DropDown.module.scss","sourcesContent":[".root {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 79px;\n}\n\n.itemContainer {\n  width: calc((100% - 28px) / 2);\n  &>div{\n    margin-bottom: 35px;\n    &:last-child{\n      margin-bottom: 0;\n    }\n  }\n}\n\n@media (max-width: 950px) {\n  .root {\n    margin-bottom: 65px;\n  }\n}\n\n@media (max-width: 700px) {\n  .root {\n    margin-bottom: 50px;\n  }\n  .itemContainer {\n    width: 100%;\n  }\n}\n"]}]);
+exports.push([module.i, ".DropDown_root__f7YtX {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 79px; }\n\n.DropDown_itemContainer__H9wVs {\n  width: calc((100% - 28px) / 2); }\n  .DropDown_itemContainer__H9wVs > div {\n    margin-bottom: 35px; }\n    .DropDown_itemContainer__H9wVs > div:last-child {\n      margin-bottom: 0; }\n\n@media (max-width: 950px) {\n  .DropDown_root__f7YtX {\n    margin-bottom: 65px; } }\n\n@media (max-width: 700px) {\n  .DropDown_root__f7YtX {\n    margin-bottom: 30px; }\n  .DropDown_itemContainer__H9wVs {\n    width: 100%; } }\n", "",{"version":3,"sources":["/Users/petrpozoga/WIB/where-better/src/componentns/Layouts/DropDown/DropDown.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,eAAe;EACf,mBAAmB,EAAA;;AAGrB;EACE,8BAA8B,EAAA;EADhC;IAGI,mBAAmB,EAAA;IAHvB;MAKM,gBAAgB,EAAA;;AAKtB;EACE;IACE,mBAAmB,EAAA,EACpB;;AAGH;EACE;IACE,mBAAmB,EAAA;EAErB;IACE,WAAW,EAAA,EACZ","file":"DropDown.module.scss","sourcesContent":[".root {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 79px;\n}\n\n.itemContainer {\n  width: calc((100% - 28px) / 2);\n  &>div{\n    margin-bottom: 35px;\n    &:last-child{\n      margin-bottom: 0;\n    }\n  }\n}\n\n@media (max-width: 950px) {\n  .root {\n    margin-bottom: 65px;\n  }\n}\n\n@media (max-width: 700px) {\n  .root {\n    margin-bottom: 30px;\n  }\n  .itemContainer {\n    width: 100%;\n  }\n}\n"]}]);
 // Exports
 exports.locals = {
 	"root": "DropDown_root__f7YtX",
@@ -12934,7 +12953,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _Layouts_DropDown_DropDown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Layouts/DropDown/DropDown */ "./src/componentns/Layouts/DropDown/DropDown.js");
-/* harmony import */ var _store_home_faq_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../store/home/faq/actions */ "./src/store/home/faq/actions.js");
+/* harmony import */ var _Layouts_Btn_Btn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Layouts/Btn/Btn */ "./src/componentns/Layouts/Btn/Btn.js");
+/* harmony import */ var _store_home_faq_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../store/home/faq/actions */ "./src/store/home/faq/actions.js");
+/* harmony import */ var _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FAQ.module.scss */ "./src/componentns/Home/FAQ/FAQ.module.scss");
+/* harmony import */ var _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5__);
 var _this = undefined,
     _jsxFileName = "/Users/petrpozoga/WIB/where-better/src/componentns/Home/FAQ/FAQ.js";
 
@@ -12944,46 +12966,71 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
 var FAQ = function FAQ(props) {
   var faqList = props.faqList,
-      windowInnerWidth = props.windowInnerWidth;
+      windowInnerWidth = props.windowInnerWidth,
+      faqListMobile = props.faqListMobile,
+      showMoreQuestion = props.showMoreQuestion;
   return __jsx("div", {
+    className: _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.root,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 11,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 12,
       columnNumber: 7
     }
   }, "\u0427\u0430\u0441\u0442\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B"), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 13,
       columnNumber: 7
     }
   }, "\u041D\u0430\u0439\u0434\u0438\u0442\u0435 \u043F\u0440\u043E\u0432\u0430\u0439\u0434\u0435\u0440\u043E\u0432, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0430\u044E\u0442 \u0434\u043E\u043C\u0430\u0448\u043D\u0438\u0439 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442 \u0438 \u0422\u0412 \u043F\u043E \u0432\u0430\u0448\u0435\u043C\u0443 \u0430\u0434\u0440\u0435\u0441\u0443"), __jsx(_Layouts_DropDown_DropDown__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    items: faqList,
+    items: windowInnerWidth > 700 ? faqList : faqListMobile,
     isMoreColumn: windowInnerWidth > 700,
     onUpdate: props.changeHomeFaqDropDown,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 14,
       columnNumber: 7
     }
-  }));
+  }), windowInnerWidth <= 700 && faqList.length !== faqListMobile.length ? __jsx("div", {
+    className: _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.btnContainer,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, __jsx(_Layouts_Btn_Btn__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: 'Больше вопросов',
+    onClick: showMoreQuestion,
+    styleBtn: 'blackTransparent',
+    className: _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.btn,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
+    }
+  })) : null);
 };
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
     faqList: state.home.faq.faqList,
+    faqListMobile: state.home.faq.faqListMobile,
     windowInnerWidth: state.window.size.windowInnerWidth
   };
 };
@@ -12991,12 +13038,76 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     changeHomeFaqDropDown: function changeHomeFaqDropDown(arr) {
-      return dispatch(Object(_store_home_faq_actions__WEBPACK_IMPORTED_MODULE_3__["changeHomeFaqDropDown"])(arr));
+      return dispatch(Object(_store_home_faq_actions__WEBPACK_IMPORTED_MODULE_4__["changeHomeFaqDropDown"])(arr));
+    },
+    showMoreQuestion: function showMoreQuestion() {
+      return dispatch(Object(_store_home_faq_actions__WEBPACK_IMPORTED_MODULE_4__["showMoreQuestion"])());
     }
   };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(FAQ));
+
+/***/ }),
+
+/***/ "./src/componentns/Home/FAQ/FAQ.module.scss":
+/*!**************************************************!*\
+  !*** ./src/componentns/Home/FAQ/FAQ.module.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../../../node_modules/next/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./FAQ.module.scss */ "./node_modules/next/node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/componentns/Home/FAQ/FAQ.module.scss");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = function(element){// These elements should always exist. If they do not,
+// this code should fail.
+var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
+// Each style tag should be placed right before our
+// anchor. By inserting before and not after, we do not
+// need to track the last inserted element.
+parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
+//
+// After styles are injected, we need to remove the
+// <style> tags that set `body { display: none; }`.
+//
+// We use `requestAnimationFrame` as a way to defer
+// this operation since there may be multiple style
+// tags.
+;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../../../node_modules/next/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/next/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../../../node_modules/next/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./FAQ.module.scss */ "./node_modules/next/node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/componentns/Home/FAQ/FAQ.module.scss",
+      function () {
+        var newContent = __webpack_require__(/*! !../../../../node_modules/next/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./FAQ.module.scss */ "./node_modules/next/node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/componentns/Home/FAQ/FAQ.module.scss");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
 
 /***/ }),
 
@@ -17417,29 +17528,36 @@ if (true) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Btn_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Btn.module.scss */ "./src/componentns/Layouts/Btn/Btn.module.scss");
-/* harmony import */ var _Btn_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Btn_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Btn_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Btn.module.scss */ "./src/componentns/Layouts/Btn/Btn.module.scss");
+/* harmony import */ var _Btn_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Btn_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
 var _this = undefined,
     _jsxFileName = "/Users/petrpozoga/WIB/where-better/src/componentns/Layouts/Btn/Btn.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var title = _ref.title,
       styleBtn = _ref.styleBtn,
-      className = _ref.className;
-  return __jsx("div", {
-    className: _Btn_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a[styleBtn] + (className ? ' ' + className : ''),
+      className = _ref.className,
+      onClick = _ref.onClick;
+  var attribute = {
+    className: _Btn_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a[styleBtn] + (className ? ' ' + className : '')
+  };
+  if (onClick) attribute.onClick = onClick;
+  return __jsx("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, attribute, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 12,
       columnNumber: 5
     }
-  }, title);
+  }), title);
 });
 
 /***/ }),
@@ -19846,18 +19964,37 @@ var mapStateToProps = function mapStateToProps(state) {
 /*!***************************************!*\
   !*** ./src/store/home/faq/actions.js ***!
   \***************************************/
-/*! exports provided: CHANGE_HOME_FAQ_DROPDOWN, changeHomeFaqDropDown */
+/*! exports provided: CHANGE_HOME_FAQ_DROPDOWN, CHANGE_FAQ_LIST_MOBILE, changeHomeFaqDropDown, showMoreQuestion */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_HOME_FAQ_DROPDOWN", function() { return CHANGE_HOME_FAQ_DROPDOWN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_FAQ_LIST_MOBILE", function() { return CHANGE_FAQ_LIST_MOBILE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeHomeFaqDropDown", function() { return changeHomeFaqDropDown; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showMoreQuestion", function() { return showMoreQuestion; });
+/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+
 var CHANGE_HOME_FAQ_DROPDOWN = 'CHANGE_HOME_FAQ_DROPDOWN';
+var CHANGE_FAQ_LIST_MOBILE = 'CHANGE_FAQ_LIST_MOBILE';
 var changeHomeFaqDropDown = function changeHomeFaqDropDown(arr) {
   return {
     type: CHANGE_HOME_FAQ_DROPDOWN,
     arr: arr
+  };
+};
+var showMoreQuestion = function showMoreQuestion() {
+  return function (dispatch, getState) {
+    var faq = getState().home.faq;
+    var showItems = faq.showMobileItems;
+    var faqList = faq.faqList.slice();
+    var faqListMobile = faq.faqListMobile.slice();
+    console.log(faqList.slice(faqListMobile.length, faqListMobile.length + showItems));
+    faqListMobile = [].concat(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(faqListMobile), Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(faqList.slice(faqListMobile.length, faqListMobile.length + showItems)));
+    dispatch({
+      type: CHANGE_FAQ_LIST_MOBILE,
+      faqListMobile: faqListMobile
+    });
   };
 };
 

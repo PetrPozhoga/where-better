@@ -2438,9 +2438,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Layouts_DropDown_DropDown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Layouts/DropDown/DropDown */ "./src/componentns/Layouts/DropDown/DropDown.js");
-/* harmony import */ var _store_home_faq_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../store/home/faq/actions */ "./src/store/home/faq/actions.js");
+/* harmony import */ var _Layouts_Btn_Btn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Layouts/Btn/Btn */ "./src/componentns/Layouts/Btn/Btn.js");
+/* harmony import */ var _store_home_faq_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../store/home/faq/actions */ "./src/store/home/faq/actions.js");
+/* harmony import */ var _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FAQ.module.scss */ "./src/componentns/Home/FAQ/FAQ.module.scss");
+/* harmony import */ var _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "/Users/petrpozoga/WIB/where-better/src/componentns/Home/FAQ/FAQ.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -2449,54 +2454,94 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const FAQ = props => {
   const {
     faqList,
-    windowInnerWidth
+    windowInnerWidth,
+    faqListMobile,
+    showMoreQuestion
   } = props;
   return __jsx("div", {
+    className: _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.root,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 11,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 12,
       columnNumber: 7
     }
   }, "\u0427\u0430\u0441\u0442\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B"), __jsx("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 13,
       columnNumber: 7
     }
   }, "\u041D\u0430\u0439\u0434\u0438\u0442\u0435 \u043F\u0440\u043E\u0432\u0430\u0439\u0434\u0435\u0440\u043E\u0432, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0430\u044E\u0442 \u0434\u043E\u043C\u0430\u0448\u043D\u0438\u0439 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442 \u0438 \u0422\u0412 \u043F\u043E \u0432\u0430\u0448\u0435\u043C\u0443 \u0430\u0434\u0440\u0435\u0441\u0443"), __jsx(_Layouts_DropDown_DropDown__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    items: faqList,
+    items: windowInnerWidth > 700 ? faqList : faqListMobile,
     isMoreColumn: windowInnerWidth > 700,
     onUpdate: props.changeHomeFaqDropDown,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 14,
       columnNumber: 7
     }
-  }));
+  }), windowInnerWidth <= 700 && faqList.length !== faqListMobile.length ? __jsx("div", {
+    className: _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.btnContainer,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, __jsx(_Layouts_Btn_Btn__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: 'Больше вопросов',
+    onClick: showMoreQuestion,
+    styleBtn: 'blackTransparent',
+    className: _FAQ_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.btn,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
+    }
+  })) : null);
 };
 
 const mapStateToProps = state => {
   return {
     faqList: state.home.faq.faqList,
+    faqListMobile: state.home.faq.faqListMobile,
     windowInnerWidth: state.window.size.windowInnerWidth
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  changeHomeFaqDropDown: arr => dispatch(Object(_store_home_faq_actions__WEBPACK_IMPORTED_MODULE_3__["changeHomeFaqDropDown"])(arr))
+  changeHomeFaqDropDown: arr => dispatch(Object(_store_home_faq_actions__WEBPACK_IMPORTED_MODULE_4__["changeHomeFaqDropDown"])(arr)),
+  showMoreQuestion: () => dispatch(Object(_store_home_faq_actions__WEBPACK_IMPORTED_MODULE_4__["showMoreQuestion"])())
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(FAQ));
+
+/***/ }),
+
+/***/ "./src/componentns/Home/FAQ/FAQ.module.scss":
+/*!**************************************************!*\
+  !*** ./src/componentns/Home/FAQ/FAQ.module.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"root": "FAQ_root__1EqBq",
+	"btnContainer": "FAQ_btnContainer__3Yv9-",
+	"btn": "FAQ_btn__1jKiF"
+};
 
 /***/ }),
 
@@ -6109,21 +6154,28 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/petrpozoga/WIB/where-better/src/componentns/Layouts/Btn/Btn.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = (({
   title,
   styleBtn,
-  className
+  className,
+  onClick
 }) => {
-  return __jsx("div", {
-    className: _Btn_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a[styleBtn] + (className ? ' ' + className : ''),
+  const attribute = {
+    className: _Btn_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a[styleBtn] + (className ? ' ' + className : '')
+  };
+  if (onClick) attribute.onClick = onClick;
+  return __jsx("div", _extends({}, attribute, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 12,
       columnNumber: 5
     }
-  }, title);
+  }), title);
 });
 
 /***/ }),
@@ -8127,18 +8179,45 @@ const mapStateToProps = state => {
 /*!***************************************!*\
   !*** ./src/store/home/faq/actions.js ***!
   \***************************************/
-/*! exports provided: CHANGE_HOME_FAQ_DROPDOWN, changeHomeFaqDropDown */
+/*! exports provided: CHANGE_HOME_FAQ_DROPDOWN, CHANGE_FAQ_LIST_MOBILE, changeHomeFaqDropDown, showMoreQuestion */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_HOME_FAQ_DROPDOWN", function() { return CHANGE_HOME_FAQ_DROPDOWN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_FAQ_LIST_MOBILE", function() { return CHANGE_FAQ_LIST_MOBILE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeHomeFaqDropDown", function() { return changeHomeFaqDropDown; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showMoreQuestion", function() { return showMoreQuestion; });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+
 const CHANGE_HOME_FAQ_DROPDOWN = 'CHANGE_HOME_FAQ_DROPDOWN';
+const CHANGE_FAQ_LIST_MOBILE = 'CHANGE_FAQ_LIST_MOBILE';
 const changeHomeFaqDropDown = arr => ({
   type: CHANGE_HOME_FAQ_DROPDOWN,
   arr
 });
+const showMoreQuestion = () => (dispatch, getState) => {
+  const faq = getState().home.faq;
+  const showItems = faq.showMobileItems;
+  const faqList = faq.faqList.slice();
+  let faqListMobile = faq.faqListMobile.slice();
+  console.log(faqList.slice(faqListMobile.length, faqListMobile.length + showItems));
+  faqListMobile = [].concat(_toConsumableArray(faqListMobile), _toConsumableArray(faqList.slice(faqListMobile.length, faqListMobile.length + showItems)));
+  dispatch({
+    type: CHANGE_FAQ_LIST_MOBILE,
+    faqListMobile
+  });
+};
 
 /***/ }),
 
