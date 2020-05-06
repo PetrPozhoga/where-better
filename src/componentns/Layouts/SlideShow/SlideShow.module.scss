@@ -10,6 +10,7 @@
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  border-radius: 23px;
   //z-index: 1;
 }
 
@@ -18,6 +19,8 @@
   height: 100%;
   position: relative;
   margin-left: 0px;
+  border-radius: 23px;
+  overflow: hidden;
   //transition: left linear .3s;
 }
 
