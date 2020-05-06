@@ -65,6 +65,11 @@
   &>label{
     max-width: 303px;
     height: 45px;
+    &>svg {
+      width: 20px;
+      height: 20px;
+      right: 18px;
+    }
   }
   input {
     @include input;

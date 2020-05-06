@@ -1,11 +1,13 @@
 @import "../../../styles/mixin";
+
 .root {
   position: relative;
   display: block;
   width: 100%;
   max-width: 419px;
   border-radius: 30px;
-  &>span{
+
+  & > span {
     position: absolute;
     left: 28px;
     top: 50%;
@@ -15,14 +17,26 @@
     font-size: 14px;
     line-height: 17px;
   }
+
   input {
     @include input;
     height: 60px;
     border-radius: 30px;
     padding: 28px 28px 12px 28px;
     background: transparent;
-    &:focus + span{
+
+    &:focus + span {
       top: 16px !important;
     }
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity linear .2s;
   }
 }
