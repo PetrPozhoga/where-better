@@ -101,6 +101,12 @@ div.footerNav {
   }
 }
 
+@media (max-width: 1050px) {
+  .topNav a{
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 950px) {
   .home {
     h1 {
@@ -109,6 +115,9 @@ div.footerNav {
   }
   div.navLink {
     margin-bottom: 65px;
+  }
+  .topNav a{
+    font-size: 12px;
   }
   .storeSocialContainer {
     display: flex;
@@ -135,6 +144,12 @@ div.footerNav {
   }
 }
 
+@media (max-width: 950px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
 @media (max-width: 700px) {
   .home {
     h1 {
@@ -146,9 +161,6 @@ div.footerNav {
     h2 {
       @include homeSecondTitleSmall
     }
-  }
-  .mobileNav {
-    display: none;
   }
   .logoContainer {
     margin-bottom: 25px;

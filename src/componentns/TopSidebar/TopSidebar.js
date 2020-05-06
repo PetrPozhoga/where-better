@@ -45,7 +45,7 @@ const TopSidebar = (props) => {
 
 const mapStateToProps = state => {
   return {
-    windowInnerWidth: state.window.size.windowInnerWidth,
+    windowInnerWidth: state.window.size.windowInnerWidth
   }
 }
 

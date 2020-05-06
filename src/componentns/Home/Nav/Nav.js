@@ -6,8 +6,8 @@ import styles from './Nav.module.scss'
 const Nav = ({ linkList, color, className }) => {
   return (
     <div className={ styles.nav + (className ? ' ' + className : '')}>
-      { linkList.map(({ title, href }, key) =>
-        <BtnLink title={ title } href={ href } key={ key } color={ color }/>
+      { linkList.map(({ title, href, isNativeLink }, key) =>
+        <BtnLink title={ title } href={ href } isNativeLink={ isNativeLink } key={ key } color={ color }/>
       ) }
     </div>
   )

@@ -26,13 +26,14 @@ import { CHANGE__CONSULTATION_SEND_MODAL } from "../store/modal/actions"
 import { toggleModal } from "../store/modal/actions"
 import styles from '../componentns/Home/Home.module.scss'
 
-const Index = ({ windowInnerWidth, consultationSendModal, toggleModal }) => {
+const Index = ({ windowInnerWidth, consultationSendModal, toggleModal, locationOrigin }) => {
   const linkList = [
-    { title: 'Каталог провайдеров', href: '/' },
-    { title: 'Рейтинг провайдеров', href: '/' },
-    { title: 'Акции', href: '/' },
-    { title: 'Тарифы', href: '/' },
-    { title: 'Сравнить тарифы', href: '/' },
+    { title: 'Каталог провайдеров', href: locationOrigin + '/provider', isNativeLink: true },
+    { title: 'Рейтинг провайдеров', href: locationOrigin + '/ratings', isNativeLink: true },
+    { title: 'Интернет в офис', href: 'https://telecom.gde-luchshe.ru/', isNativeLink: true },
+    { title: 'Интернет на дачу', href: locationOrigin +  '/internet-na-dachu/',isNativeLink: true  },
+    { title: 'Интерактивное ТВ', href: locationOrigin + '/interaktivnoe-tv/', isNativeLink: true },
+    { title: 'Помощь', href: locationOrigin + '/help', isNativeLink: true },
   ]
 
   const footerLinkList = [
@@ -46,7 +47,7 @@ const Index = ({ windowInnerWidth, consultationSendModal, toggleModal }) => {
     <>
       <div className={ styles.home }>
         <div className={ styles.container }>
-          <div className={ styles.mobileNav }>
+          <div className={ styles.mobileNav + ' ' + styles.topNav }>
             <Nav linkList={ linkList } color={ 'red' }/>
           </div>
           <EnableInternet/>
@@ -69,7 +70,7 @@ const Index = ({ windowInnerWidth, consultationSendModal, toggleModal }) => {
               <SearchProvider/>
             </div>
             <ConnectWrightNow/>
-            <div className={ styles.mobileNav }>
+            <div className={ styles.mobileNav + ' ' + styles.topNav }>
               <Nav linkList={ linkList } color={ 'red' } className={ styles.navLink }/>
             </div>
             <InternetCities/>
@@ -96,7 +97,8 @@ const Index = ({ windowInnerWidth, consultationSendModal, toggleModal }) => {
 const mapStateToProps = state => {
   return {
     windowInnerWidth: state.window.size.windowInnerWidth,
-    consultationSendModal: state.modal.consultationSendModal
+    consultationSendModal: state.modal.consultationSendModal,
+    locationOrigin: state.window.location.origin
   }
 }
 

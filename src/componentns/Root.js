@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { changeWindowSize } from "../store/window/actions"
+import { changeWindowSize, changeLocationOrigin } from "../store/window/actions"
 
-const Root = ({ children, changeWindowSize, size }) => {
+const Root = ({ children, changeWindowSize, size, changeLocationOrigin }) => {
 
   useEffect(() => {
     changeWindowSize()
+    changeLocationOrigin()
+
     window.addEventListener('resize', () => {
       console.log(window.innerWidth)
       if (size.windowInnerWidth !== window.innerWidth) {
@@ -30,7 +31,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  changeWindowSize: () => dispatch(changeWindowSize())
+  changeWindowSize: () => dispatch(changeWindowSize()),
+  changeLocationOrigin: () => dispatch(changeLocationOrigin()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Root)
