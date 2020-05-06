@@ -37,19 +37,19 @@ const Select = ({ items, changeSelect = function () {}, name, itemKey = 'label',
   }
 
   return (
-    <div className={ styles.root + ' ' + (showItems ? styles.rootActive : '') } style={{}}>
+    <div className={ styles.root + ' ' + (showItems ? styles.rootActive : '') } style={ {} }>
       <div className={ styles.box }>
         <div className={ styles.container }>
           <div className={ styles.selectedItem } onClick={ dropDown }>
             { selectedItem[ itemKey ] }
           </div>
           <div className={ styles.arrow } onClick={ dropDown }>
-            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"
+            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"
                  className={ !showItems ? '' : styles.iconTop }>
-              <path d="M1.38037 1.53516L4.08887 5.07069L6.79736 1.53516" stroke="black" strokeWidth="1.5"
-                    strokeLinecap="round" strokeLinejoin="round"/>
+              <path fillRule="evenodd" clipRule="evenodd"
+                    d="M1.34542 -1.40961e-07L-0.000121994 1.39309L6.38129 8L12.7627 1.39309L11.4172 -1.66124e-08L6.38129 5.21383L1.34542 -1.40961e-07Z"
+                    fill="#9B9B9B"/>
             </svg>
-
             <span className={ `${ !showItems ? 'icon-shape' : 'icon-shape icon-shape-top' }` }/>
           </div>
         </div>
@@ -59,11 +59,12 @@ const Select = ({ items, changeSelect = function () {}, name, itemKey = 'label',
           style={ { display: showItems ? 'block' : 'none' } }>
           {
             items.map((item, index) =>
-              <div key={ index }
-                   onClick={ () => selectItem(item) }
-                   className={ selectedItem[ itemKey ] === item[ itemKey ] ? styles.selected : '' }>
-                { item[ itemKey ] }
-              </div>)
+              selectedItem.code === item.code ? null :
+                <div key={ index }
+                     onClick={ () => selectItem(item) }
+                     className={ selectedItem[ itemKey ] === item[ itemKey ] ? styles.selected : '' }>
+                  { item[ itemKey ] }
+                </div>)
           }
         </div>
 

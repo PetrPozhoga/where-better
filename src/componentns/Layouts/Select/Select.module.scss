@@ -1,9 +1,8 @@
-.root{
+.root {
   height: 45px;
   position: relative;
   color: #000;
   border-radius: 22px;
-  font-weight: bold;
   z-index: 0;
   background: #fff;
   cursor: pointer;
@@ -11,28 +10,39 @@
   max-width: 100%;
 }
 
-.rootActive{
-  z-index: 1;
+.rootActive {
+  z-index: 3;
+  border-radius: 22px 22px 0 0;
+
+  .container {
+    border-bottom: none;
+
+  }
+
+  .items {
+    border-top: none;
+  }
 }
 
 .box {
   height: inherit;
-  border-radius: 22px;
+  border-radius: inherit;
 }
 
-.container{
+.container {
   height: inherit;
   width: 100%;
   margin: 0px;
   padding: 0px;
   border: 2px solid #E7E7E7;
-  border-radius: 22px;
+  border-radius: inherit;
 }
 
 .selectedItem {
   height: 100%;
   width: 100%;
-  padding: 0px 23px;
+  padding: 0px 26px 0 18px;
+  font-weight: 600;
   display: flex;
   align-items: center;
 }
@@ -46,39 +56,47 @@
   top: 0;
   text-align: right;
   padding-right: 12px;
-  line-height: 41px;
+  line-height: 45px;
   margin-left: 18px;
-  svg{
+
+  svg {
     display: inline-block;
     padding-top: 0 !important;
     margin-right: 0 !important;
     transition: transform .3s;
-    &::before{
+
+    &::before {
       color: #fff;
     }
   }
-  .iconTop{
+
+  .iconTop {
     transform: rotateX(180deg);
   }
 }
 
-.items{
-  border: 1px solid #E7E7E7;
-  border-radius: 22px;
+.items {
+  border: 2px solid #E7E7E7;
+  border-radius: 0 0 22px 22px;
   overflow: hidden;
-  margin-top: 5px;
-  &>div{
-    padding: 13px 23px;
+
+  & > div {
+    height: 33px;
+    padding: 0px 18px;
+    display: flex;
+    align-items: center;
     background: #fff;
-    border-bottom: 1px solid #E7E7E7;
-    &:last-child{
+
+    &:last-child {
       border: none;
     }
-    &:hover{
+
+    &:hover {
       background: #E7E7E7;
     }
   }
-  .selected{
+
+  .selected {
     background: #E7E7E7;
   }
 }

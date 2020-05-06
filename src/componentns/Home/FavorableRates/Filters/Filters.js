@@ -6,7 +6,7 @@ import styles from './Filters.module.scss'
 const Filters = () => {
   const providerList = [
     { label: 'Мегафон', code: '1' },
-    { label: 'Ростелеком', code: '1' },
+    { label: 'Ростелеком', code: '2' },
   ]
   const tariffList = [
     { label: 'Интернет+ТВ+Мобильный', code: '1' },
