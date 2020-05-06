@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
 import Btn from "../../../Layouts/Btn/Btn"
 import Modal from '../../../Layouts/Modal/Modal'
-import ConsultationModal from './ConsultationModal/ConsultationModal'
+import ConsultationModal from '../../../Layouts/Modal/ConsultationModal/ConsultationModal'
 import { connect } from 'react-redux'
 import { toggleModal } from '../../../../store/modal/actions'
-import { CHANGE_ADVANTAGES_CONSULTATION_MODAL } from "../../../../store/home/advantages/actions"
+import { CHANGE_ADVANTAGES_CONSULTATION_MODAL } from "../../../../store/modal/actions"
 import styles from './Consultation.module.scss'
 
 const Consultation = memo(({ consultationModal, toggleModal }) => {
@@ -30,7 +30,7 @@ const Consultation = memo(({ consultationModal, toggleModal }) => {
 
 const mapStateToProps = state => {
   return {
-    consultationModal: state.home.advantages.consultationModal
+    consultationModal: state.modal.consultationModal
   }
 }
 
