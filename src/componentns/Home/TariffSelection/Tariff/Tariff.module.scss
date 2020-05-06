@@ -41,6 +41,9 @@
 .layout {
   max-width: 280px;
   width: 100%;
+  div{
+    justify-content: center;
+  }
 }
 
 .radioContainer {

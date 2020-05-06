@@ -12,7 +12,7 @@
 }
 
 .providerContainer {
-  max-width: 150px;
+  max-width: 160px;
   width: 100%;
 }
 
@@ -20,6 +20,9 @@
   max-width: 342px;
   width: 100%;
   text-align: center;
+  div{
+    justify-content: center;
+  }
 }
 
 .btn {
