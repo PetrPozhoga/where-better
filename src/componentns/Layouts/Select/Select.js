@@ -50,7 +50,6 @@ const Select = ({ items, changeSelect = function () {}, name, itemKey = 'label',
                     d="M1.34542 -1.40961e-07L-0.000121994 1.39309L6.38129 8L12.7627 1.39309L11.4172 -1.66124e-08L6.38129 5.21383L1.34542 -1.40961e-07Z"
                     fill="#9B9B9B"/>
             </svg>
-            <span className={ `${ !showItems ? 'icon-shape' : 'icon-shape icon-shape-top' }` }/>
           </div>
         </div>
 

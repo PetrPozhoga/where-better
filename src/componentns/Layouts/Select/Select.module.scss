@@ -8,6 +8,11 @@
   cursor: pointer;
   width: 100%;
   max-width: 100%;
+  &:hover {
+    .container {
+     border-color: #AFAFAF
+    }
+  }
 }
 
 .rootActive {
@@ -16,7 +21,7 @@
 
   .container {
     border-bottom: none;
-
+    border-color: #AFAFAF;
   }
 
   .items {
@@ -76,7 +81,7 @@
 }
 
 .items {
-  border: 2px solid #E7E7E7;
+  border: 2px solid #AFAFAF;
   border-radius: 0 0 22px 22px;
   overflow: hidden;
 
