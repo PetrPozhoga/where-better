@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from "react-redux"
 import { sendSmsLinkApp } from '../../../store/home/searchProvider/actions'
 import Btn from "../../Layouts/Btn/Btn"
@@ -13,8 +13,18 @@ import { CHANGE_GET_SMS_LINK_MODAL } from "../../../store/home/searchProvider/ac
 import MobileMask from "../../Layouts/MobileMask/MobileMask"
 import styles from './SearchProvider.module.scss'
 
-const SearchProvider = ({ windowInnerWidth, sendSmsLinkApp, getSmsLinkModal, toggleModal }) => {
+const SearchProvider = ({ windowInnerWidth, sendSmsLinkApp, getSmsLinkModal, toggleModal, numberFieldError, numberFieldClear }) => {
   const [ number, setNumber ] = useState('')
+
+  useEffect(() => {
+    console.log(numberFieldClear)
+    if (numberFieldClear) setNumber('')
+  }, [numberFieldClear])
+
+  useEffect(() => {
+    console.log(number)
+  }, [number])
+
   return (
     <>
       <div className={ styles.root }>
@@ -33,9 +43,11 @@ const SearchProvider = ({ windowInnerWidth, sendSmsLinkApp, getSmsLinkModal, tog
               Получить ссылку в СМС
             </label>
             <div className={ styles.maskContainer }>
-              <MobileMask value={ '' } onChange={ (value) => setNumber(value) }/>
-              <Btn className={ styles.btn } styleBtn='black' title='Отправить'
-                   onClick={ sendSmsLinkApp.bind(null, number) }/>
+              <MobileMask value={ number } onChange={ (value) => setNumber(value) } isError={ numberFieldError }/>
+              <div className={ styles.btnContainer }>
+                <Btn className={ styles.btn } styleBtn='black' title='Отправить'
+                     onClick={ sendSmsLinkApp.bind(null, number) }/>
+              </div>
             </div>
           </div>
         </div>
@@ -50,7 +62,9 @@ const SearchProvider = ({ windowInnerWidth, sendSmsLinkApp, getSmsLinkModal, tog
 const mapStateToProps = state => {
   return {
     windowInnerWidth: state.window.size.windowInnerWidth,
-    getSmsLinkModal: state.home.searchProvider.getSmsLinkModal
+    getSmsLinkModal: state.home.searchProvider.getSmsLinkModal,
+    numberFieldError: state.home.searchProvider.numberFieldError,
+    numberFieldClear: state.home.searchProvider.numberFieldClear,
   }
 }
 
