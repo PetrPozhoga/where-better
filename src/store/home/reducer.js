@@ -1,11 +1,12 @@
-import { createReducer } from "../../utils/store"
+import { combineReducers } from "redux"
 import faq from './faq/reducer'
 import advantages from './advantages/reducer'
-import { combineReducers } from "redux"
+import searchProvider from './searchProvider/reducer'
 
 const defaultProps = {}
 
 export default combineReducers({
   faq,
-  advantages
+  advantages,
+  searchProvider
 })
