@@ -17,7 +17,7 @@ const Root = ({ children, changeWindowSize, size }) => {
 
   return (
     <div id='App'>
-      { children }
+      { size.windowInnerWidth ? children : null }
     </div>
   )
 }
