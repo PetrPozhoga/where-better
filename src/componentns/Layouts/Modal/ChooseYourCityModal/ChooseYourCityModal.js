@@ -116,16 +116,11 @@ const ChooseYourCityModal = () => {
     setCityListColumn(createColumn(cityList, 4))
   }, [])
 
-  useEffect(() => {
-    console.log(cityListColumn)
-  },[cityListColumn])
-
   const createColumn = (arr, column) => {
     return Array.apply(null, new Array(column)).map((item, index) => {
       const totalElementInArr = Math.ceil(arr.length / column)
       const firstIndex = totalElementInArr * index
       const secondIndex = firstIndex + totalElementInArr
-      console.log(arr.slice(firstIndex, secondIndex), arr, firstIndex, secondIndex)
       return arr.slice(firstIndex, secondIndex)
     })
   }

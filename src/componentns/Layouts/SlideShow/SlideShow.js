@@ -26,10 +26,8 @@ const SlideShow = ({ children = [], showElements, animationTime = 300, className
     let container = document.querySelector('.' + styles.container + classNameContainer)
     setContainerElement(container)
     container.style.transition = 'left ease ' + animationTime + 'ms'
-    console.log('left linear ' + animationTime + 'ms')
     let slideItem = document.querySelectorAll('.' + styles.container + classNameContainer + '>div')
     slideItem.forEach((item, index) => {
-      console.log(((wrapElement.offsetWidth - ((showElements - 1) * marginRight)) / (showElements)))
       item.style.width = ((wrapElement.offsetWidth - ((showElements - 1) * (marginRight || 0))) / (showElements)) + 'px'
       item.style.marginRight = (marginRight || 0) + 'px'
     })
@@ -41,7 +39,6 @@ const SlideShow = ({ children = [], showElements, animationTime = 300, className
   }, [windowInnerWidth])
 
   useEffect(() => {
-    console.log(children)
     setCopyChildren(children.slice())
   }, [ children ])
 

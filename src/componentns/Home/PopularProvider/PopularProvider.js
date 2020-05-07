@@ -78,9 +78,6 @@ const PopularProvider = memo(({ windowInnerWidth }) => {
     }
   ]
 
-  console.log(styles)
-
-
   return (
     <div className={ styles.root }>
       <h1>Популярные провайдеры</h1>

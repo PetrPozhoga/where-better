@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { changeWindowSize, changeLocationOrigin } from "../store/window/actions"
+import { getUserCity } from "../store/user/residence/actions"
 
 const Root = ({ children, changeWindowSize, size, changeLocationOrigin }) => {
 

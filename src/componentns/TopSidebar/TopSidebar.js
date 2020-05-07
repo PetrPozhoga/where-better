@@ -4,11 +4,12 @@ import Btn from "../Layouts/Btn/Btn"
 import Logo from "./Logo/Logo"
 import { toggleModal } from '../../store/modal/actions'
 import { CHANGE_CHOOSE_YOR_CITY_MODAL } from "../../store/modal/actions"
+import YorCityIs from "./YorCityIs/YorCityIs"
 import styles from './TopSidebar.module.scss'
 
 
 const TopSidebar = (props) => {
-  const { toggleModal } = props
+  const { toggleModal, city } = props
   const chooseRegion = toggleModal.bind(null, CHANGE_CHOOSE_YOR_CITY_MODAL, true)
 
   return (
@@ -30,6 +31,7 @@ const TopSidebar = (props) => {
                   fill="black"/>
           </svg>
         </div>
+        { city.city_title ? <YorCityIs city={ city.city_title } changeCity={ chooseRegion }/> : null }
       </div>
       { props.windowInnerWidth <= 700 ?
         <div className={ styles.mobileSideBar }>
@@ -52,7 +54,8 @@ const TopSidebar = (props) => {
 
 const mapStateToProps = state => {
   return {
-    windowInnerWidth: state.window.size.windowInnerWidth
+    windowInnerWidth: state.window.size.windowInnerWidth,
+    city: state.user.residence.city
   }
 }
 
