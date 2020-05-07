@@ -23,6 +23,7 @@ import StoreBtn from "../componentns/Home/SearchProvider/StoreBtn/StoreBtn"
 import Modal from '../componentns/Layouts/Modal/Modal'
 import ConsultationSendModal from '../componentns/Layouts/Modal/ConsultationSendModal/ConsultationSendModal'
 import ChooseYourCityModal from "../componentns/Layouts/Modal/ChooseYourCityModal/ChooseYourCityModal"
+import ChooseCityAndStreetModal from "../componentns/Layouts/Modal/ChooseCityAndStreetModal/ChooseCityAndStreetModal"
 import { CHANGE__CONSULTATION_SEND_MODAL, CHANGE_CHOOSE_YOR_CITY_MODAL } from "../store/modal/actions"
 import { toggleModal } from "../store/modal/actions"
 import styles from '../componentns/Home/Home.module.scss'
