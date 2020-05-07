@@ -22,16 +22,17 @@ import SocialList from "../componentns/Home/SocialList/SocialList"
 import StoreBtn from "../componentns/Home/SearchProvider/StoreBtn/StoreBtn"
 import Modal from '../componentns/Layouts/Modal/Modal'
 import ConsultationSendModal from '../componentns/Layouts/Modal/ConsultationSendModal/ConsultationSendModal'
-import { CHANGE__CONSULTATION_SEND_MODAL } from "../store/modal/actions"
+import ChooseYourCityModal from "../componentns/Layouts/Modal/ChooseYourCityModal/ChooseYourCityModal"
+import { CHANGE__CONSULTATION_SEND_MODAL, CHANGE_CHOOSE_YOR_CITY_MODAL } from "../store/modal/actions"
 import { toggleModal } from "../store/modal/actions"
 import styles from '../componentns/Home/Home.module.scss'
 
-const Index = ({ windowInnerWidth, consultationSendModal, toggleModal, locationOrigin }) => {
+const Index = ({ windowInnerWidth, consultationSendModal, toggleModal, locationOrigin, chooseYourCityModal }) => {
   const linkList = [
     { title: 'Каталог провайдеров', href: locationOrigin + '/provider', isNativeLink: true },
     { title: 'Рейтинг провайдеров', href: locationOrigin + '/ratings', isNativeLink: true },
     { title: 'Интернет в офис', href: 'https://telecom.gde-luchshe.ru/', isNativeLink: true },
-    { title: 'Интернет на дачу', href: locationOrigin +  '/internet-na-dachu/',isNativeLink: true  },
+    { title: 'Интернет на дачу', href: locationOrigin + '/internet-na-dachu/', isNativeLink: true },
     { title: 'Интерактивное ТВ', href: locationOrigin + '/interaktivnoe-tv/', isNativeLink: true },
     { title: 'Помощь', href: locationOrigin + '/help', isNativeLink: true },
   ]
@@ -90,6 +91,10 @@ const Index = ({ windowInnerWidth, consultationSendModal, toggleModal, locationO
              type={ CHANGE__CONSULTATION_SEND_MODAL }>
         <ConsultationSendModal closeModal={ toggleModal.bind(null, CHANGE__CONSULTATION_SEND_MODAL, false) }/>
       </Modal>
+      <Modal isOpen={ chooseYourCityModal } classModal={ 'chooseYourCityModal' }
+             type={ CHANGE_CHOOSE_YOR_CITY_MODAL }>
+        <ChooseYourCityModal/>
+      </Modal>
     </>
   )
 }
@@ -98,6 +103,7 @@ const mapStateToProps = state => {
   return {
     windowInnerWidth: state.window.size.windowInnerWidth,
     consultationSendModal: state.modal.consultationSendModal,
+    chooseYourCityModal: state.modal.chooseYourCityModal,
     locationOrigin: state.window.location.origin
   }
 }

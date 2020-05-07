@@ -1,11 +1,11 @@
 import { validNumber } from "../../utils/inputField"
 
-
 export const CHANGE_ADVANTAGES_CONSULTATION_MODAL = 'CHANGE_ADVANTAGES_CONSULTATION_MODAL'
 export const CHANGE_VALID_CONSULTATION_NUMBER_FIELD= 'CHANGE_VALID_CONSULTATION_NUMBER_FIELD'
 export const CLEAR_CONSULTATION_NUMBER_FIELD= 'CLEAR_CONSULTATION_NUMBER_FIELD'
 
 export const CHANGE__CONSULTATION_SEND_MODAL = 'CHANGE__CONSULTATION_SEND_MODAL'
+export const CHANGE_CHOOSE_YOR_CITY_MODAL = 'CHANGE_CHOOSE_YOR_CITY_MODAL'
 
 export const toggleModal = (type, isOpen) => {
   return { type, isOpen: isOpen !== undefined ? isOpen : false }

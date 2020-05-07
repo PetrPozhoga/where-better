@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import stylesMask from '../MobileMask/MobileMask.module.scss'
 import styles from './InputField.module.scss'
 
-const InputField = ({ value, placeholder, inputId }) => {
+const InputField = ({ value, placeholder, inputId, className }) => {
   const [ customValue, setCustomValue ] = useState('')
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const InputField = ({ value, placeholder, inputId }) => {
   }
 
   return (
-    <label className={ stylesMask.root + ' ' + styles.root }>
+    <label className={ stylesMask.root + ' ' + styles.root + (className ? ' ' + className : '') }>
       <input id={ inputId } type="text" value={ customValue } onChange={ changeHandler }/>
       <span style={ { top: !!customValue.length ? '16px' : '50%' } }>{ placeholder }</span>
     </label>

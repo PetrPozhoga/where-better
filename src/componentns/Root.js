@@ -23,7 +23,6 @@ const Root = ({ children, changeWindowSize, size, changeLocationOrigin }) => {
   )
 }
 
-
 const mapStateToProps = state => {
   return {
     size: state.window.size

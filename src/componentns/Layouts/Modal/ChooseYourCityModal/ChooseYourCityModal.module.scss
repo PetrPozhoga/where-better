@@ -1,0 +1,65 @@
+@import "../../../../styles/var";
+
+.root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 33px 65px 45px 65px;
+  &>h1{
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 20px;
+  }
+}
+
+.inputField {
+  max-width: 100%;
+  height: 45px;
+  input {
+    width: 100%;
+    height: 45px;
+    padding-left: 12px;
+  }
+  span{
+    left: 13px;
+  }
+}
+
+.cityRoot {
+  margin-top: 30px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cityContainer {
+  display: flex;
+}
+
+.column{
+  margin-right: 50px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.item {
+  margin-bottom: 20px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.region {
+  font-size: 14px;
+  line-height: 17px;
+  color: #BEC2C4;
+  margin-bottom: 5px;
+}
+
+.city {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: $black-color;
+}
