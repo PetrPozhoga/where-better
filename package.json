@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start:old": "next start",
     "dev:server": "cross-env NODE_ENV=development PORT=3000 node server/index.js",
-    "prod:server": "cross-env NODE_ENV=production PORT=3000 node server/index.js"
+    "start": "cross-env NODE_ENV=production PORT=3000 node server/index.js"
   },
   "author": "",
   "dependencies": {

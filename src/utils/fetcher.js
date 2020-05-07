@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const server = process.env.NODE_ENV === 'development' ? 'https://dos.find-best.ru/' : 'https://dos.gde-luchshe.ru/'
+//https://dos.gde-luchshe.ru
+const server = process.env.NODE_ENV === 'development' ? 'https://dos.find-best.ru' : 'https://dos.find-best.ru'
 
 export const fetcher = async ({ method = 'get', url, params }) => {
   if (!!typeof window ) url = server + url
