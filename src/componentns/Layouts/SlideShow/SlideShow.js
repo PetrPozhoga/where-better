@@ -36,7 +36,7 @@ const SlideShow = ({ children = [], showElements, animationTime = 300, className
 
   useEffect(() => {
     document.querySelector('.' + styles.container + classNameContainer).style.marginLeft = (slideOption.currentIndex * (wrapElement.offsetWidth / showElements) + 'px')
-  }, [windowInnerWidth])
+  }, [ windowInnerWidth ])
 
   useEffect(() => {
     setCopyChildren(children.slice())

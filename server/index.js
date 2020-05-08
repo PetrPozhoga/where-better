@@ -19,11 +19,8 @@ app
 
     // Set up the proxy.
     if (dev) {
-      const devProxy = [ '/geoip' ]
       const { createProxyMiddleware } = require('http-proxy-middleware')
-      devProxy.forEach(url => {
-        server.use(url, createProxyMiddleware({ target: 'https://dos.find-best.ru/', changeOrigin: true }));
-      })
+      server.use('/api', createProxyMiddleware({ target: 'https://dos.find-best.ru', changeOrigin: true }));
     }
 
     // Default catch-all handler to allow Next.js to handle all other routes

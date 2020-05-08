@@ -32,6 +32,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   changeWindowSize: () => dispatch(changeWindowSize()),
+  getUserCity: () => dispatch(getUserCity()),
   changeLocationOrigin: () => dispatch(changeLocationOrigin()),
 })
 
