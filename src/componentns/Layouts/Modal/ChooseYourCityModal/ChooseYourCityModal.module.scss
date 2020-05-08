@@ -26,10 +26,23 @@
   }
 }
 
+.transparentRect{
+  display: block;
+  width: calc(100% - 100px);
+  height: 82px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: red;
+  background: linear-gradient(356.93deg, #FFFFFF 34.61%, rgba(255, 255, 255, 0.65) 69.32%);
+  border-radius: 34px;
+}
+
 .cityRoot {
   margin-top: 30px;
   flex: 1;
   overflow-y: auto;
+  padding-bottom: 55px;
 }
 
 .cityContainer {

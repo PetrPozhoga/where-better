@@ -16,6 +16,7 @@
 
   & > span {
     z-index: 1;
+    transition: top linear 100ms;
   }
 
   input {

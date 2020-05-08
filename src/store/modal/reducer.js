@@ -5,7 +5,8 @@ import {
   CHANGE__CONSULTATION_SEND_MODAL,
   CHANGE_VALID_CONSULTATION_NUMBER_FIELD,
   CLEAR_CONSULTATION_NUMBER_FIELD,
-  CHANGE_CHOOSE_YOR_CITY_MODAL
+  CHANGE_CHOOSE_YOR_CITY_MODAL,
+  CHANGE_CHOOSE_CITY_AND_STREET_MODAL
 } from './actions'
 
 const defaultValue = {
@@ -13,7 +14,8 @@ const defaultValue = {
   consultationNumberError: false,
   consultationNumberClear: false,
   consultationSendModal: false,
-  chooseYourCityModal: false
+  chooseYourCityModal: false,
+  chooseCityAndStreetModal: false
 }
 
 export default createReducer(defaultValue, {
@@ -22,4 +24,5 @@ export default createReducer(defaultValue, {
   [ CHANGE_VALID_CONSULTATION_NUMBER_FIELD ]: (state, { isError }) => ({ ...state, consultationNumberError: isError }),
   [ CLEAR_CONSULTATION_NUMBER_FIELD ]: (state, { clearField }) => ({ ...state, consultationNumberClear: clearField }),
   [ CHANGE_CHOOSE_YOR_CITY_MODAL ]: (state, { isOpen }) => ({ ...state, chooseYourCityModal: isOpen }),
+  [ CHANGE_CHOOSE_CITY_AND_STREET_MODAL ]: (state, { isOpen }) => ({ ...state, chooseCityAndStreetModal: isOpen }),
 })

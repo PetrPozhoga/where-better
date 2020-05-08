@@ -1,150 +1,53 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import InputField from "../../InputField/InputField"
 import styles from './ChooseYourCityModal.module.scss'
+import { searchUserCity } from "../../../../store/user/residence/actions"
+import { connect } from "react-redux"
+import AddressNotFound from "../AddressNotFound/AddressNotFound"
 
-const ChooseYourCityModal = () => {
-  const cityList = [
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-    {
-      "city_title": "Москва",
-      "district_title": "Москва",
-    },
-  ]
-
-  const [ cityListColumn, setCityListColumn ] = useState([])
+const ChooseYourCityModal = ({ cityList, searchUserCity, district_title, cityListFetch }) => {
 
   useEffect(() => {
-    setCityListColumn(createColumn(cityList, 4))
-  }, [])
+    searchUserCity(district_title)
+  }, [ useEffect ])
 
-  const createColumn = (arr, column) => {
-    return Array.apply(null, new Array(column)).map((item, index) => {
-      const totalElementInArr = Math.ceil(arr.length / column)
-      const firstIndex = totalElementInArr * index
-      const secondIndex = firstIndex + totalElementInArr
-      return arr.slice(firstIndex, secondIndex)
-    })
-  }
+  const cityIsNotFind = !cityListFetch && cityList.length <= 0 && searchUserCity.length > 0
 
   return (
     <div className={ styles.root }>
       <h1>Выберите ваш город</h1>
-      <InputField placeholder={ 'Введите ваш город' } value={ '' } className={ styles.inputField }/>
+      <InputField placeholder={ 'Введите ваш город' } value={ '' } onChange={ value => searchUserCity(value) }
+                  className={ styles.inputField }/>
+      { cityIsNotFind ? <AddressNotFound strNotFount={ 'этот город не найден' }/> : null }
       <div className={ styles.cityRoot }>
         <div className={ styles.cityContainer }>
-          { cityListColumn.map((column, indexColumn) =>
-            <div className={ styles.column } key={ indexColumn }>
-              { column.map((city, index) =>
-                <div className={ styles.item } key={ index }>
-                  <div className={ styles.region }>{ city.district_title }</div>
-                  <div className={ styles.city }>{ city.city_title }</div>
-                </div>
-              ) }
-            </div>
-          ) }
+          <div className={ styles.column }>
+            { cityList.map((city, index) =>
+              <div className={ styles.item } key={ index }>
+                <div className={ styles.region }>{ city.additional_label || district_title }</div>
+                <div className={ styles.city }>{ city.display_label }</div>
+              </div>
+            ) }
+          </div>
         </div>
       </div>
+      { cityIsNotFind ? null : <div className={ styles.transparentRect }/> }
     </div>
   )
 }
 
-export default ChooseYourCityModal
+const mapStateToProps = state => {
+  return {
+    cityList: state.user.residence.cityList,
+    cityListFetch: state.user.residence.cityListFetch,
+    district_title: state.user.residence.city.district_title,
+    searchCity: state.user.residence.searchCity
+  }
+}
+
+
+const mapDispatchToProps = dispatch => ({
+  searchUserCity: (city) => dispatch(searchUserCity((city)))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChooseYourCityModal)

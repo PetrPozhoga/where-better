@@ -5,7 +5,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 33px 65px 63px 65px;
+  padding: 33px 65px 30px 65px;
   &>h1{
     font-size: 48px;
     line-height: 58px;
@@ -15,7 +15,6 @@
 .inputField {
   max-width: 100%;
   height: 45px;
-  margin-bottom: 15px;
   input {
     width: 100%;
     height: 45px;
@@ -33,12 +32,27 @@
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.07);
   border-radius: 55px;
   margin-bottom: 15px;
+  margin-top: 15px;
+
 }
 
 .container {
   flex: 1;
   overflow-y: auto;
   position: relative;
+  padding-bottom: 55px;
+}
+
+.transparentRect{
+  display: block;
+  width: calc(100% - 100px);
+  height: 82px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: red;
+  background: linear-gradient(356.93deg, #FFFFFF 34.61%, rgba(255, 255, 255, 0.65) 69.32%);
+  border-radius: 34px;
 }
 
 .item {

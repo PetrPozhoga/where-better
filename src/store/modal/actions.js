@@ -7,6 +7,9 @@ export const CLEAR_CONSULTATION_NUMBER_FIELD= 'CLEAR_CONSULTATION_NUMBER_FIELD'
 export const CHANGE__CONSULTATION_SEND_MODAL = 'CHANGE__CONSULTATION_SEND_MODAL'
 export const CHANGE_CHOOSE_YOR_CITY_MODAL = 'CHANGE_CHOOSE_YOR_CITY_MODAL'
 
+export const CHANGE_CHOOSE_CITY_AND_STREET_MODAL = 'CHANGE_CHOOSE_CITY_AND_STREET_MODAL'
+
+
 export const toggleModal = (type, isOpen) => {
   return { type, isOpen: isOpen !== undefined ? isOpen : false }
 }
