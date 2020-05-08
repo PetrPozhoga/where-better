@@ -4,6 +4,7 @@ const next = require('next')
 const port = parseInt(process.env.PORT, 10) || 3000
 const env = process.env.NODE_ENV
 const dev = env !== 'production'
+
 const app = next({
   dir: '.', // base directory where everything is, could move to src later
   dev,
@@ -18,10 +19,12 @@ app
     server = express()
 
     // Set up the proxy.
-    if (dev || true) {
-      const { createProxyMiddleware } = require('http-proxy-middleware')
-      server.use('/api', createProxyMiddleware({ target: 'https://dos.find-best.ru', changeOrigin: true }));
-    }
+    // if (dev || true) {
+    //   const { createProxyMiddleware } = require('http-proxy-middleware')
+    //   server.use('/api', createProxyMiddleware({ target: 'https://dos.find-best.ru', changeOrigin: true }))
+    // }
+    const { createProxyMiddleware } = require('http-proxy-middleware')
+    server.use('/api', createProxyMiddleware({ target: 'https://dos.find-best.ru', changeOrigin: true }))
 
     // Default catch-all handler to allow Next.js to handle all other routes
     server.all('*', (req, res) => handle(req, res))
