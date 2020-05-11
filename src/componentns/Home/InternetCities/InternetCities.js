@@ -3,14 +3,8 @@ import SlideShow from "../../Layouts/SlideShow/SlideShow"
 import styles from './InternetCities.module.scss'
 import { connect } from "react-redux"
 
-const InternetCities = memo(({ windowInnerWidth }) => {
-  const cities = [
-    [ 'Москва', 'Московская область', 'Санкт-Петербург город', 'Ленинградская область', 'Адыгея республика', 'Алтай республика', 'Алтайский край', 'Амурская область', 'Архангельская область' ],
-    [ 'Москва', 'Московская область', 'Санкт-Петербург город', 'Ленинградская область', 'Адыгея республика', 'Алтай республика', 'Алтайский край', 'Амурская область', 'Архангельская область' ],
-    [ 'Москва', 'Московская область', 'Санкт-Петербург город', 'Ленинградская область', 'Адыгея республика', 'Алтай республика', 'Алтайский край', 'Амурская область', 'Архангельская область' ],
-    [ 'Москва', 'Московская область', 'Санкт-Петербург город', 'Ленинградская область', 'Адыгея республика', 'Алтай республика', 'Алтайский край', 'Амурская область', 'Архангельская область' ],
-    [ 'Москва', 'Московская область', 'Санкт-Петербург город', 'Ленинградская область', 'Адыгея республика', 'Алтай республика', 'Алтайский край', 'Амурская область', 'Архангельская область' ]
-  ]
+const InternetCities = ({ windowInnerWidth, internetCityList }) => {
+
   return (
     <div className={ styles.root }>
       <h1>Города, в которых можно подключить интернет</h1>
@@ -20,12 +14,13 @@ const InternetCities = memo(({ windowInnerWidth }) => {
                  paddingLeft={ windowInnerWidth <= 700 ? 42 : windowInnerWidth <= 950 ? 77 : windowInnerWidth <= 1267 ? 60 : 90 }
                  paddingRight={ windowInnerWidth <= 700 ? 42 : windowInnerWidth <= 950 ? 77 : windowInnerWidth <= 1267 ? 60 : 90 }
                  idRoot={ 'internetCitiesId' }
-                 classNameContainer={ 'internetCities' } slideHeight={ windowInnerWidth <= 700 ? 296 :439 } animationTime={ 300 }>
-        { cities.map((item, index) =>
+                 classNameContainer={ 'internetCities' } slideHeight={ windowInnerWidth <= 700 ? 296 : 439 }
+                 animationTime={ 300 }>
+        { internetCityList.map((item, index) =>
           <div key={ index } className={ styles.item }>
             { item.map((city, index) =>
               <div key={ index }>
-                { city }
+                { city.district }
               </div>
             ) }
           </div>
@@ -34,11 +29,12 @@ const InternetCities = memo(({ windowInnerWidth }) => {
 
     </div>
   )
-})
+}
 
 const mapStateToProps = state => {
   return {
-    windowInnerWidth: state.window.size.windowInnerWidth
+    windowInnerWidth: state.window.size.windowInnerWidth,
+    internetCityList: state.home.internetCities.internetCityList
   }
 }
 

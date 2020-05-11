@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
 import Nav from "../componentns/Home/Nav/Nav"
 import EnableInternet from '../componentns/Home/EnableInternet/EnableInternet'
 import Consultation from "../componentns/Home/Сonsultation/Сonsultation"
@@ -23,12 +24,14 @@ import StoreBtn from "../componentns/Home/SearchProvider/StoreBtn/StoreBtn"
 import Modal from '../componentns/Layouts/Modal/Modal'
 import ConsultationSendModal from '../componentns/Layouts/Modal/ConsultationSendModal/ConsultationSendModal'
 import ChooseYourCityModal from "../componentns/Layouts/Modal/ChooseYourCityModal/ChooseYourCityModal"
-import ChooseCityAndStreetModal from "../componentns/Layouts/Modal/ChooseCityAndStreetModal/ChooseCityAndStreetModal"
 import { CHANGE__CONSULTATION_SEND_MODAL, CHANGE_CHOOSE_YOR_CITY_MODAL } from "../store/modal/actions"
+import { getInternetCityList } from "../store/home/internetCities/actions"
 import { toggleModal } from "../store/modal/actions"
 import styles from '../componentns/Home/Home.module.scss'
+import { getUserCity } from "../store/user/residence/actions"
 
 const Index = ({ windowInnerWidth, consultationSendModal, toggleModal, locationOrigin, chooseYourCityModal }) => {
+
   const linkList = [
     { title: 'Каталог провайдеров', href: locationOrigin + '/provider', isNativeLink: true },
     { title: 'Рейтинг провайдеров', href: locationOrigin + '/ratings', isNativeLink: true },
@@ -45,6 +48,7 @@ const Index = ({ windowInnerWidth, consultationSendModal, toggleModal, locationO
     { title: 'Вакансии', href: '/' },
     { title: 'Контакты', href: '/' },
   ]
+
   return (
     <>
       <div className={ styles.home }>
@@ -100,6 +104,22 @@ const Index = ({ windowInnerWidth, consultationSendModal, toggleModal, locationO
   )
 }
 
+Index.getInitialProps = async (ctx) => {
+  const { store } = ctx
+  const isServer = !!ctx.req
+  const asyncAllMethod = () => {
+    return Promise.all([
+      store.dispatch(getInternetCityList()),
+      store.dispatch(getUserCity()),
+    ])
+  }
+  if (isServer) await asyncAllMethod()
+  else asyncAllMethod()
+
+  console.log('is server', !!ctx.req, process.title)
+  return {}
+}
+
 const mapStateToProps = state => {
   return {
     windowInnerWidth: state.window.size.windowInnerWidth,
@@ -110,7 +130,9 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  toggleModal: (type, isOpen) => dispatch(toggleModal(type, isOpen))
+  toggleModal: (type, isOpen) => dispatch(toggleModal(type, isOpen)),
+  getUserCity: bindActionCreators(getUserCity, dispatch),
+  getInternetCityList: bindActionCreators(getInternetCityList, dispatch)
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index)

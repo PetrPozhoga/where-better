@@ -18,8 +18,8 @@ const Root = ({ children, changeWindowSize, size, changeLocationOrigin }) => {
   }, [])
 
   return (
-    <div id='App'>
-      { size.windowInnerWidth ? children : null }
+    <div id='App' style={ { opacity: size.windowInnerWidth ? 1 : 0 } }>
+      { children }
     </div>
   )
 }

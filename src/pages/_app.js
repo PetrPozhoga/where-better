@@ -35,11 +35,6 @@ class MyApp extends App {
   }
 }
 
-MyApp.getInitialProps = async ({ ctx, isServer }) => {
-  const { store } = ctx
-  await store.dispatch(getUserCity())
-  return { }
-}
 
 const mapStateToProps = state => {
   return {

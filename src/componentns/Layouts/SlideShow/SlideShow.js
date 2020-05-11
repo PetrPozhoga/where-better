@@ -15,6 +15,10 @@ const SlideShow = ({ children = [], showElements, animationTime = 300, className
   const [ slideIsOver, setSlideIsOver ] = useState(false)
 
   useEffect(() => {
+    setContainerElement(document.querySelector('.' + styles.container + classNameContainer))
+  }, [ children ])
+
+  useEffect(() => {
     setRootElement(document.getElementById(styles.root + idRoot))
   }, [ rootElement ])
 
@@ -27,12 +31,13 @@ const SlideShow = ({ children = [], showElements, animationTime = 300, className
     setContainerElement(container)
     container.style.transition = 'left ease ' + animationTime + 'ms'
     let slideItem = document.querySelectorAll('.' + styles.container + classNameContainer + '>div')
+
     slideItem.forEach((item, index) => {
       item.style.width = ((wrapElement.offsetWidth - ((showElements - 1) * (marginRight || 0))) / (showElements)) + 'px'
       item.style.marginRight = (marginRight || 0) + 'px'
     })
 
-  }, [ containerElement, windowInnerWidth ])
+  }, [ containerElement, windowInnerWidth, copyChildren ])
 
   useEffect(() => {
     document.querySelector('.' + styles.container + classNameContainer).style.marginLeft = (slideOption.currentIndex * (wrapElement.offsetWidth / showElements) + 'px')
@@ -123,7 +128,7 @@ const SlideShow = ({ children = [], showElements, animationTime = 300, className
                      / showElements)
                    * copyChildren.length + 'px'
                } }>
-            { copyChildren.map(item => item) }
+            { !!copyChildren.length ? copyChildren : children }
           </div>
         </div>
         <div className={ styles.arrowControl }>

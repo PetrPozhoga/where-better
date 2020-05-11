@@ -28,7 +28,6 @@ export const searchUserCity = (city) => (dispatch, getState)=> {
     setTimeout(async () => {
       const prevStreetState = JSON.parse(JSON.stringify(getState().user.residence.searchCity).trim())
       city = city.trim()
-      console.log(prevStreetState, city)
       if (prevStreetState !== city && prevStreetState.length > 0) return
       else if (getState().user.residence.cityList.length > 0 && city.length <= 0) {
         return dispatch({ type: CHANGE_USER_CITY_LIST_FETCH, cityListFetch: false })
