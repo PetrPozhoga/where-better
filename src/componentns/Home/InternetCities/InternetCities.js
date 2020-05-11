@@ -7,7 +7,7 @@ const InternetCities = ({ windowInnerWidth, internetCityList }) => {
 
   return (
     <div className={ styles.root }>
-      <h1>Города, в которых можно подключить интернет</h1>
+      <h1>Мы поможем подключить домашний интернет и ТВ по всей России</h1>
       <SlideShow windowInnerWidth={ windowInnerWidth }
                  showElements={ windowInnerWidth <= 700 ? 1 : windowInnerWidth <= 950 ? 2 : windowInnerWidth <= 1267 ? 3 : 4 }
                  marginRight={ windowInnerWidth <= 700 ? 0 : windowInnerWidth <= 950 ? 20 : 15 }

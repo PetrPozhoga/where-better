@@ -6,7 +6,7 @@
   margin-bottom: 86px;
 
   & > h1 {
-    max-width: 576px;
+    max-width: 905px;
     margin: 0 auto 50px auto;
   }
 }
@@ -49,6 +49,15 @@
     background: #FFFFFF;
     border-radius: 25px;
     font-size: 12px;
+  }
+}
+
+@media (max-width: 905px) {
+  .root {
+    & > h1 {
+      max-width: calc(100% - 40px);
+      margin: 0 auto 50px auto;
+    }
   }
 }
 
