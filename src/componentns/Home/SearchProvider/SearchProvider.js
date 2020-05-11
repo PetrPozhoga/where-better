@@ -32,10 +32,8 @@ const SearchProvider = ({ windowInnerWidth, sendSmsLinkApp, getSmsLinkModal, tog
           <img src={ windowInnerWidth <= 700 ? iphoneImg : searchMob } alt=""/>
         </div>
         <div>
-          <h1 className={ styles.title }>Поиск провайдера у вас в телефоне</h1>
-          <div className={ styles.description }>Легко найти врача неподалёку от вас
-            Удобное приложение, всегда под рукой
-            Записывайтесь к врачу в одно касание
+          <h1 className={ styles.title }>Поиск провайдеров по адресу в вашем телефоне</h1>
+          <div className={ styles.description }>Ищите и подключайте самые выгодные тарифы от лучших интернет-провайдеров в приложении Где лучше
           </div>
           <StoreBtn className={ styles.logoContainer }/>
           <div className={ styles.maskRoot }>

@@ -27,8 +27,6 @@ const Slot = ({ item, index, faqAnswer }) => {
 
   const getStyle = (node, styleList) => styleList.map(style => Number(getComputedStyle(node)[ style ].replace('px', '')))
 
-  console.log(item)
-
   return (
     <div className={ styles.root + (item.isActive ? ' ' + styles.isActive : '') }
          custom-id={ index }
