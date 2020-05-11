@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Slot from "./Slot/Slot"
 import styles from './DropDown.module.scss'
 
-const DropDown = memo(({ items, isMoreColumn, onUpdate }) => {
+const DropDown = memo(({ items, isMoreColumn, onUpdate, faqAnswer }) => {
   const [ dropDownItems, setDropDownItems ] = useState([])
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const DropDown = memo(({ items, isMoreColumn, onUpdate }) => {
         if (!target.parentNode) return
         else return getCustomId(target.parentNode)
       }
-    }catch(err) {
+    } catch (err) {
       console.log(err)
     }
   }
@@ -40,7 +40,7 @@ const DropDown = memo(({ items, isMoreColumn, onUpdate }) => {
       <div className={ styles.itemContainer } style={ { marginRight: isMoreColumn ? '28px' : '' } }>
         { items.slice(0, (isMoreColumn ? Math.ceil(items.length / 2) : items.length)).map((item, index) =>
           <div key={ index } className={ styles.item }>
-            <Slot item={ item } index={ index }/>
+            <Slot item={ item } index={ index } faqAnswer={ faqAnswer }/>
           </div>
         ) }
       </div>
@@ -50,7 +50,7 @@ const DropDown = memo(({ items, isMoreColumn, onUpdate }) => {
             index += Math.ceil(items.length / 2)
             return (
               <div key={ index } className={ styles.item }>
-                <Slot item={ item } index={ index }/>
+                <Slot item={ item } index={ index } faqAnswer={ faqAnswer }/>
               </div>
             )
           }) }

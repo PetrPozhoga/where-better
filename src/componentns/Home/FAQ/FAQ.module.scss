@@ -1,3 +1,26 @@
+@import '../../../styles/var';
+.root {
+  & > div {
+    p {
+      margin-bottom: 30px;
+    }
+    a{
+      color: $red-color;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        &:before {
+          content: "- ";
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .root {
     margin-bottom: 50px;

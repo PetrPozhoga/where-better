@@ -2,10 +2,11 @@ import React, { useEffect } from 'react'
 import styles from './Slot.module.scss'
 import PropTypes from 'prop-types'
 
-const Slot = ({ item, index }) => {
+const Slot = ({ item, index, faqAnswer }) => {
   const ref = React.createRef()
 
   useEffect(() => {
+    console.log(item)
     setHeight(ref)
   }, [ ref ])
 
@@ -26,6 +27,9 @@ const Slot = ({ item, index }) => {
   const sum = arr => arr.reduce((acc, item) => acc += item, 0)
 
   const getStyle = (node, styleList) => styleList.map(style => Number(getComputedStyle(node)[ style ].replace('px', '')))
+
+  console.log(item)
+
   return (
     <div className={ styles.root + (item.isActive ? ' ' + styles.isActive : '') }
          custom-id={ index }
@@ -40,7 +44,7 @@ const Slot = ({ item, index }) => {
         </svg>
 
       </div>
-      <div className={ styles.description }>{ item.description }</div>
+      <div className={ styles.description }>{ faqAnswer[ item.description ] }</div>
     </div>
   )
 }
