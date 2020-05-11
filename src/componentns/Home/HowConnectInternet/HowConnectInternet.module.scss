@@ -1,5 +1,8 @@
 .root{
   margin-bottom: 60px;
+  &>h1{
+    margin-bottom: 50px;
+  }
 }
 
 .container {
@@ -20,6 +23,8 @@
   text-align: center;
   &>svg{
     margin-bottom: 38px;
+    flex: 1;
+
   }
   &:last-child{
     margin-right: 0;
@@ -38,6 +43,11 @@
 }
 
 @media (max-width: 1550px) {
+  .root{
+    &>h1{
+      margin-bottom: 40px;
+    }
+  }
   .item {
     height: 330px;
   }
@@ -69,6 +79,7 @@
     margin: 0;
     padding: 25px 25px 35px 25px;
     &>svg {
+      flex: 1;
       max-width: 174px;
       width: 100%;
       margin-bottom: 8px;
@@ -78,6 +89,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
+    margin-top: auto;
   }
 
   .description{
