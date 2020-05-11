@@ -1,5 +1,8 @@
 .root {
   margin-bottom: 50px;
+  &>h2{
+    max-width: 1159px;
+  }
 }
 
 @media (max-width: 950px) {
