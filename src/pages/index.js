@@ -113,6 +113,7 @@ Index.getInitialProps = async (ctx) => {
       store.dispatch(getUserCity()),
     ])
   }
+
   if (isServer) await asyncAllMethod()
   else asyncAllMethod()
 

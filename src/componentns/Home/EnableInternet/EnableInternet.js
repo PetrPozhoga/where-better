@@ -12,7 +12,7 @@ const EnableInternet = ({ chooseCityAndStreetModal, toggleModal }) => {
     <>
       <div className={ styles.root }>
         <h1>Подключите домашний интернет</h1>
-        <h2>Более 200 интернет-провайдеров доступно для подключения</h2>
+        <h2>Найдите провайдеров, которые подключают домашний интернет по вашему адресу:</h2>
         <div className={ styles.searchContainer }>
           <InputField value={ '' } onClick={ toggleModal.bind(null, CHANGE_CHOOSE_CITY_AND_STREET_MODAL, true) }
                       inputId={ 'EnableInternetSearchProvider' } placeholder={ 'Введите адрес' }/>
