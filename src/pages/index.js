@@ -115,9 +115,10 @@ Index.getInitialProps = async (ctx) => {
   }
 
   if (isServer) await asyncAllMethod()
-  else asyncAllMethod()
-
-  console.log('is server', !!ctx.req, process.title)
+  else {
+    asyncAllMethod()
+  }
+  console.log('is server', !!ctx.req, process.title, store.getState().user)
   return {}
 }
 

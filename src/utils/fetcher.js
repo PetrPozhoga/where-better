@@ -6,5 +6,6 @@ const server = process.env.NODE_ENV === 'development' ? 'https://dos.find-best.r
 export const fetcher = async ({ method = 'get', url, params, version = '/v1' }) => {
   url = '/api' + version + url
   if (process.title === 'node') url = server + url
+  console.log(url)
   return await axios[ method ](url, { ...params })
 }

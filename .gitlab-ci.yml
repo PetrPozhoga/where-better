@@ -1,0 +1,23 @@
+image: node:12.16.1
+cache:
+  key: master-${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+stages:
+  - setup
+  - build
+  - deploy
+setup:
+  stage: setup
+  script: npm install
+build:
+  stage: build
+  script: npm build
+deploy_staging:
+  stage: deploy
+  script: npm start
+  environment:
+    name: staging
+    url: http://internet-2020.find-best.ru/
+  only:
+    - master
