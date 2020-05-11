@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
+import styles from '../componentns/Home/Home.module.scss'
 import Nav from "../componentns/Home/Nav/Nav"
 import EnableInternet from '../componentns/Home/EnableInternet/EnableInternet'
 import Consultation from "../componentns/Home/Сonsultation/Сonsultation"
@@ -27,7 +28,6 @@ import ChooseYourCityModal from "../componentns/Layouts/Modal/ChooseYourCityModa
 import { CHANGE__CONSULTATION_SEND_MODAL, CHANGE_CHOOSE_YOR_CITY_MODAL } from "../store/modal/actions"
 import { getInternetCityList } from "../store/home/internetCities/actions"
 import { toggleModal } from "../store/modal/actions"
-import styles from '../componentns/Home/Home.module.scss'
 import { getUserCity } from "../store/user/residence/actions"
 
 const Index = ({ windowInnerWidth, consultationSendModal, toggleModal, locationOrigin, chooseYourCityModal }) => {

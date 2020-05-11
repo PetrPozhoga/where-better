@@ -3,6 +3,9 @@
 .root {
   text-align: center;
   margin-bottom: 50px;
+  &>h2{
+    max-width: 972px;
+  }
 }
 
 .popularProviderContainer {
