@@ -3,7 +3,7 @@ import SlideShow from "../../Layouts/SlideShow/SlideShow"
 import styles from './InternetCities.module.scss'
 import { connect } from "react-redux"
 
-const InternetCities = ({ windowInnerWidth, internetCityList }) => {
+const InternetCities = memo(({ windowInnerWidth, internetCityList }) => {
 
   return (
     <div className={ styles.root }>
@@ -29,7 +29,7 @@ const InternetCities = ({ windowInnerWidth, internetCityList }) => {
 
     </div>
   )
-}
+})
 
 const mapStateToProps = state => {
   return {

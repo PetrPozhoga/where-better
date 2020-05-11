@@ -18,19 +18,19 @@ const ChooseYourCityModal = ({ cityList, searchUserCity, district_title, cityLis
       <h1>Выберите ваш город</h1>
       <InputField placeholder={ 'Введите ваш город' } value={ '' } onChange={ value => searchUserCity(value) }
                   className={ styles.inputField }/>
-      { cityIsNotFind ? <AddressNotFound strNotFount={ 'этот город не найден' }/> : null }
-      <div className={ styles.cityRoot }>
-        <div className={ styles.cityContainer }>
-          <div className={ styles.column }>
-            { cityList.map((city, index) =>
-              <div className={ styles.item } key={ index }>
-                <div className={ styles.region }>{ city.additional_label || district_title }</div>
-                <div className={ styles.city }>{ city.display_label }</div>
-              </div>
-            ) }
+      { cityIsNotFind ? <AddressNotFound strNotFount={ 'этот город не найден' }/> :
+        <div className={ styles.cityRoot }>
+          <div className={ styles.cityContainer }>
+            <div className={ styles.column }>
+              { cityList.map((city, index) =>
+                <div className={ styles.item } key={ index }>
+                  <div className={ styles.region }>{ city.additional_label || district_title }</div>
+                  <div className={ styles.city }>{ city.display_label }</div>
+                </div>
+              ) }
+            </div>
           </div>
-        </div>
-      </div>
+        </div> }
       { cityIsNotFind ? null : <div className={ styles.transparentRect }/> }
     </div>
   )
