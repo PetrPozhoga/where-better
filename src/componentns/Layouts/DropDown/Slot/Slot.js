@@ -6,7 +6,6 @@ const Slot = ({ item, index, faqAnswer }) => {
   const ref = React.createRef()
 
   useEffect(() => {
-    console.log(item)
     setHeight(ref)
   }, [ ref ])
 

@@ -91,8 +91,8 @@ const Promotions = memo(({ windowInnerWidth }) => {
   ]
   return (
     <div className={ styles.root }>
-      <h1>Акции и скидки интернет-провайдеров</h1>
-      <h2>Найдите провайдеров, которые подключают домашний интернет и ТВ по вашему адресу</h2>
+      <h1>Акции на домашний интернет</h1>
+      <h2> Все действующие скидки, акции на интернет, оборудование и другие услуги провайдеров.  Подключай интернет дешево и выгодно.</h2>
       <div className={ styles.selectContainer }>
         <Select items={ providerList } name={ 'promotionsProvider' } selected={ providerList[ 0 ] }
                 itemKey={ 'label' }/>
