@@ -8,22 +8,23 @@ const AboutService = ({ windowInnerWidth }) => {
     {
       count: '278',
       title: 'интернет-провайдерв',
-      description: 'Более 200 интернет-провайдеров доступно для подключения'
+      description: 'Самый полный список интернет-провайдеров по всей России на одном сайте'
     },
     {
       count: '>3млн.',
       title: 'адресов в системе',
-      description: 'Более 200 интернет-провайдеров доступно для подключения'
+      description: 'Подключим домашний интернет и телевидение по любому адресу'
     },
     {
       count: '100 тыс.',
-      title: 'подключают интернет каждый месяц',
-      description: 'Более 200 интернет-провайдеров доступно для подключения'
+      title: 'подключают интернет\n' +
+        'каждый месяц',
+      description: 'Оставьте заявку и мы  бесплатно подберем для вас выгодный тариф'
     },
     {
-      count: '20 094',
-      title: 'отзывов о провайдерах',
-      description: 'Более 200 интернет-провайдеров доступно для подключения'
+      count: '0',
+      title: 'рублей в месяц',
+      description: 'Самый дешевый тарифный план для подключения интернета'
     },
 
   ]
@@ -39,7 +40,7 @@ const AboutService = ({ windowInnerWidth }) => {
       { windowInnerWidth <= 1150 ?
         <SlideShow animationTime={ 300 }
                    showElements={ windowInnerWidth <= 700 ? 1 : 2 }
-                   slideHeight={  windowInnerWidth <= 700 ? 203 : 232 }
+                   slideHeight={  windowInnerWidth <= 700 ? 265 : 232 }
                    marginRight={ windowInnerWidth <= 700 ? 0 : 15 }
                    windowInnerWidth={ windowInnerWidth }
                    classNameContainer={ 'aboutServiceSlider' }
